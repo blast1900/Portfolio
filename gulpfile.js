@@ -22,19 +22,21 @@ function browserReload(done){
 var sass = require('gulp-sass');
 var plumber = require('gulp-plumber'); 
 var postcss = require('gulp-postcss');
+var postcssImport = require('postcss-import');
 var autoprefixer = require('autoprefixer');
 var sassGlob = require('gulp-sass-glob');
 
 
 function sassCompile(done){
-  gulp.src('./src/scss/*.scss', {sourcemaps: true})// コンパイルするscssのパスを指定
+  gulp.src('./src/sass/*.scss', {sourcemaps: true})// コンパイルするscssのパスを指定
   .pipe(plumber()) //エラーによる強制停止を回避
-  .pipe(sassGlob()) //パーシャルファイル読み込み
+  .pipe(sassGlob()) //パーシャルファイル一括読み込み
   .pipe(sass({ //sassコンパイル
     style: 'expanded' // 整形方式指定
   }))
   .pipe(postcss([
-    autoprefixer() //ベンダープレフィックス挿入
+    postcssImport(),//cssファイルをコンパイルimport
+    autoprefixer()//ベンダープレフィックス挿入
   ]))
   .pipe(gulp.dest('./src/css', {sourcemaps: './'}));// cssファイルとソースマップの書き出し先指定
   done();
@@ -55,7 +57,7 @@ function pugCompile(done){
 
 // 監視ファイル
 function watchFiles(done){
-  gulp.watch("./src/scss/**", sassCompile);
+  gulp.watch("./src/sass/**", sassCompile);
   gulp.watch("./src/pug/**", pugCompile);
   gulp.watch("./src/*.html", browserReload);
   gulp.watch("./src/css/*.css", browserReload);
