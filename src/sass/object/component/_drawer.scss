@@ -171,27 +171,31 @@
 }
 
 
-// .c-drawer__item {
-//   a {
-//     text-decoration: none;
-//     color: $white;
-//     display: block;
-//     margin-left: 16px;
-//     margin-bottom: 8px;
-//     border-bottom: 1px solid rgba($white, 0.7);
-//   }
-// }
+.c-drawer__item {
+  a {
+    text-decoration: none;
+    color: $white;
+    display: block;
+    margin-left: 16px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba($white, 0.7);
+  }
+}
 
-// .c-drawer__item__title {
-//   font-size: 20px;
-// }
+.c-drawer__item__title {
+  font-size: 20px;
+}
 
-// .c-drawer-item-subtitle {
-//   font-size: 10px;
-// }
+.c-drawer-item-subtitle {
+  font-size: 10px;
+}
 
-// .c-drawer-item-active {
-//   a {
-//     border-bottom-color: $accent-cr;
-//   }
-// }
+.c-drawer-item-active {
+  a {
+    border-bottom-color: $accent-cr;
+  }
+}
+
+.c-drawer__open {
+  background-color: rgba(white, 0);
+}

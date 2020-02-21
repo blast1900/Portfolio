@@ -26,18 +26,18 @@ p {
 }
 
 // content
-.section-title {
+.p-section__title {
   font-size: 4.0rem;
   color: $main-cr;
   text-align: center;
 }
 
-.section-subtitle {
+.p-section__subtitle {
   display: block;
   font-size: 1.6rem;
 }
 
-.section-description {
+.p-section__description {
   width: 100%;
   text-align: center;
   font-size: 1.6rem;

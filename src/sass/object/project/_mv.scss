@@ -1,16 +1,16 @@
-#mv {
+#p-mv {
   // width: 100vw;
   height: 100vh;
   background: url(../img/mv-bg.jpg) no-repeat center;
 
-  .inner {
+  .l-inner {
     width: 100%;
     height: 100%;
     background-color: rgba($main-cr, 0.2); 
   }
 }
 
-.mv-title {
+.p-mv__title {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -26,7 +26,7 @@
   }
 }
 
-.mv-scroll {
+.p-mv__scroll {
   position: absolute;
   bottom: 10%;
   left: 50%;

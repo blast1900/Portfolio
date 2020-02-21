@@ -1,4 +1,4 @@
-.profile-box {
+.p-profile__box {
   margin-top: 64px; 
   display: flex;
   @include mq() {
@@ -6,13 +6,13 @@
   }
 }
 
-.profile-02 {
+.p-profile--02 {
   @include mq("tab-pc") {
     flex-direction: row-reverse;
   }
 }
 
-.profile-img {
+.p-profile__img {
   width: 300px;
   box-shadow: 24px 24px $main-cr;
   margin-right: 24px;
@@ -27,22 +27,22 @@
   }
 }
 
-.profile-content {
+.p-profile__content {
   align-self: center; 
   flex: 1;
   margin: 0 32px;
 }
 
-.profile-title {
+.p-profile__title {
   font-size: 3.2rem;
   color: $main-cr;
 }
 
-.profile-subtitle {
+.p-profile__subtitle {
   font-size: 1.6rem;
 }
 
-.profile-description > p {
+.p-profile__description > p {
   font-size: 1.6rem;
   margin-top: .5em;
 }

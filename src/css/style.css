@@ -226,6 +226,20 @@ svg:not([fill]) {
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
   cursor: default; }
+.l-inner {
+  margin: 0 auto;
+  padding-right: 24px;
+  padding-left: 24px;
+  max-width: 100%;
+  width: 1199px; }
+@media screen and (max-width: 1198px) {
+    .l-inner {
+      padding-right: 24px;
+      padding-left: 24px; } }
+@media screen and (max-width: 767px) {
+    .l-inner {
+      padding-right: 24px;
+      padding-left: 24px; } }
 .c-drawer {
   position: fixed;
   top: 0;
@@ -350,6 +364,21 @@ svg:not([fill]) {
   text-align: left; }
 .c-drawer.c-drawer--right #c-drawer__check:checked ~ .c-drawer__content {
   transform: translateX(0); }
+.c-drawer__item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7); }
+.c-drawer__item__title {
+  font-size: 20px; }
+.c-drawer-item-subtitle {
+  font-size: 10px; }
+.c-drawer-item-active a {
+  border-bottom-color: #e65100; }
+.c-drawer__open {
+  background-color: rgba(255, 255, 255, 0); }
 html {
   font-size: 62.5%; }
 body {
@@ -369,48 +398,56 @@ img {
   vertical-align: bottom; }
 p {
   margin-bottom: 0; }
-.section-title {
+.p-section__title {
   font-size: 4.0rem;
   color: #123E97;
   text-align: center; }
-.section-subtitle {
+.p-section__subtitle {
   display: block;
   font-size: 1.6rem; }
-.section-description {
+.p-section__description {
   width: 100%;
   text-align: center;
   font-size: 1.6rem;
   margin-top: 32px; }
-.header-logo {
+#p-header {
+  background-color: rgba(18, 62, 151, 0);
+  position: fixed;
+  width: 99%; }
+#p-header .l-inner {
+    padding: 0 24px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+.p-header-logo {
   width: 120px;
   height: 40px; }
 @media screen and (max-width: 767px) {
-  .header-nav {
+  .p-header-nav {
     display: none; } }
-.header-item {
+.p-header-nav__item {
   display: inline-block;
   text-align: center; }
-.header-item a {
+.p-header-nav__item a {
     display: block;
     text-decoration: none;
     color: #fff;
     padding-left: 16px; }
-.header-item-title {
+.p-header-nav__item__title {
   font-size: 2.0rem;
   font-weight: 600; }
-.header-item-subtitle {
+.p-header-nav__item__subtitle {
   font-size: 1.2rem;
   font-weight: 600; }
-.drawer-open {
-  background-color: rgba(255, 255, 255, 0); }
-#mv {
+#p-mv {
   height: 100vh;
   background: url(../img/mv-bg.jpg) no-repeat center; }
-#mv .inner {
+#p-mv .l-inner {
     width: 100%;
     height: 100%;
     background-color: rgba(18, 62, 151, 0.2); }
-.mv-title {
+.p-mv__title {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -421,47 +458,47 @@ p {
   font-family: 'Raleway', sans-serif;
   color: #fff; }
 @media screen and (max-width: 767px) {
-    .mv-title {
+    .p-mv__title {
       font-size: 4.0rem; } }
-.mv-scroll {
+.p-mv__scroll {
   position: absolute;
   bottom: 10%;
   left: 50%;
   transform: translateX(-50%); }
-.mv-scroll img {
+.p-mv__scroll img {
     width: 40px;
     opacity: .9; }
-.profile-box {
+.p-profile__box {
   margin-top: 64px;
   display: flex; }
 @media screen and (max-width: 767px) {
-    .profile-box {
+    .p-profile__box {
       flex-direction: column; } }
 @media screen and (min-width: 768px) {
-  .profile-02 {
+  .p-profile--02 {
     flex-direction: row-reverse; } }
-.profile-img {
+.p-profile__img {
   width: 300px;
   box-shadow: 24px 24px #123E97;
   margin-right: 24px;
   border: 3px solid #fff;
   align-self: center; }
 @media screen and (max-width: 767px) {
-    .profile-img {
+    .p-profile__img {
       width: 80%;
       box-shadow: 16px 16px #123E97;
       max-width: 300px;
       margin-bottom: 24px; } }
-.profile-content {
+.p-profile__content {
   align-self: center;
   flex: 1;
   margin: 0 32px; }
-.profile-title {
+.p-profile__title {
   font-size: 3.2rem;
   color: #123E97; }
-.profile-subtitle {
+.p-profile__subtitle {
   font-size: 1.6rem; }
-.profile-description > p {
+.p-profile__description > p {
   font-size: 1.6rem;
   margin-top: .5em; }
 /*# sourceMappingURL=style.css.map */
