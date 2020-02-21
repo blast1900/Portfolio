@@ -5,29 +5,12 @@ html {
 body {
   font-family: $ff-gothic;
   font-weight: 400;
-  color: $white;
+  color: $gray;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #FFF;
   overflow-x: hidden;
-}
-
-.inner {
-	margin: 0 auto;
-	padding: 24px 24px;
-	max-width: 100%;
-	width: $layout-width-inner;
-
-	@include mq("tab") {
-		padding-right: 24px;
-		padding-left: 24px;
-	}
-
-	@include mq("sp") {
-		padding-right: 12px;
-		padding-left: 12px;
-	}
 }
 
 img {
@@ -40,4 +23,23 @@ img {
 
 p {
   margin-bottom: 0;
+}
+
+// content
+.section-title {
+  font-size: 4.0rem;
+  color: $main-cr;
+  text-align: center;
+}
+
+.section-subtitle {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.section-description {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 32px;
 }

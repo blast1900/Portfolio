@@ -10,44 +10,65 @@ html(lang='ja')
     title タイトル
     meta(name='description' content='')
     meta(name='keywords' content='')
+    link(rel="icon" href="./img/favicon.ico")
+
   body
-    header#header
-      div.p-header
-        div.l-inner
-          div.p-header__left
-            h1.p-header-logo
+    header.p-header
+      div.l-inner
+        h1.p-header-logo
+          a(href="")
+            img(src="img/logo.svg" alt="logo")
+        nav.p-header-nav
+          ul.p-header-nav__list
+            li.p-header-nav__item
               a(href="")
-                img(src="img/logo.svg" alt="logo")
-          div.p-header__right
-            nav.p-header-nav
-              div.drawer
-                span.drawer-icon
-                span.drawer-icon
-                span.drawer-icon
-              div.p-header-nav__list
-                ul
-                  li.p-header-nav__item
-                    a(href="")
-                      span.p-header-nav__item__title Profile
-                      br
-                      span.p-header-nav__item__subtitle 自己紹介
-                  li.p-header-nav__item
-                    a(href="")
-                      span.p-header-nav__item__title Cording
-                      br
-                      span.p-header-nav__item__subtitle コーディングスキル
-                  li.p-header-nav__item
-                    a(href="")
-                      span.p-header-nav__item__title Tools
-                      br
-                      span.p-header-nav__item__subtitle 使用可能ツール
-                  li.p-header-nav__item
-                    a(href="")
-                      span.p-header-nav__item__title Contact
-                      br
-                      span.p-header-nav__item__subtitle お問い合わせ
-            // p-header-nav END
+                span.p-header-nav__item__title Profile
+                br
+                span.p-header-nav__item__subtitle 自己紹介
+            li.p-header-nav__item
+              a(href="")
+                span.p-header-nav__item__title Cording
+                br
+                span.p-header-nav__item__subtitle コーディングスキル
+            li.p-header-nav__item
+              a(href="")
+                span.p-header-nav__item__title Tools
+                br
+                span.p-header-nav__item__subtitle 使用可能ツール
+            li.p-header-nav__item
+              a(href="")
+                span.p-header-nav__item__title Contact
+                br
+                span.p-header-nav__item__subtitle お問い合わせ
+          // p-header-nav END
     // header END
+    div.c-drawer.c-drawer--right
+      input#c-drawer__check(type="checkbox")
+      label.c-drawer__open(for="c-drawer__check")
+        <span></span>
+      label.c-drawer__close(for="c-drawer__check")
+      div.c-drawer__content
+        nav.c-drawer__nav
+          ul.c-drawer__list
+            li.c-drawer__item
+              a(href="#")
+                span.c-drawer__item__title Profile
+                span.c-drawer__item__subtitle 自己紹介
+            li.c-drawer__item
+              a(href="#")
+                span.c-drawer__item__title Cording
+                span.c-drawer__item__subtitle コーディングスキル
+            li.c-drawer__item
+              a(href="#")
+                span.c-drawer__item__title Tools
+                span.c-drawer__item__subtitle 使用可能ツール
+            li.c-drawer__item
+              a(href="#")
+                span.c-drawer__item__title Contact
+                span.c-drawer__item__subtitle 問い合わせ
+        // c-drawer__content END
+      // c-drawer END
+    // p-header__drawer END
     div#mv
       div.l-inner
         p.p-mv__title Welcome<br>to<br>My Portfolio
@@ -117,4 +138,8 @@ html(lang='ja')
     footer#footer
       div.inner
     // footer END
+  script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+  script(src="./js/script.js")
+  // body END
+
 

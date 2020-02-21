@@ -32,6 +32,11 @@ $cr-table: #eee;
 $layout-width-canvas: 1440px;
 $layout-width-inner: 1199px;
 
+$inner-padding: 24px;
+$inner-padding-tab: 24px;
+$inner-padding-sp: 24px;
+
+
 // ブレークポイント
 $breakpoints: (
 	"sp": "screen and (max-width: 767px)",
@@ -82,8 +87,6 @@ $size-radio-pd_left: 30px;
 
 
 // --------------- font ---------------
-@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
-
 $ff-base: "Meiryo UI", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "Noto Sans Japanese", roboto, sans-serif;
 
 $ff-kgpw3: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Noto Sans Japanese", sans-serif;
@@ -94,29 +97,3 @@ $ff-minco: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hir
 $ff-gothic: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
 
 $ff-awesome: "Font Awesome 5 Free", sans-serif;
-
-
-// --------------- mixin ---------------
-
-
-// float 解除
-// floatを指定した要素の親要素に指定
-@mixin clearfix {
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
-
-// ul, olの初期化
-@mixin linit {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-
-// 割り算
-@function division($size, $size2) {
-	@return $size / $size2;
-}

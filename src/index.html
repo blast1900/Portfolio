@@ -10,32 +10,42 @@
     <title>タイトル</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
+    <link rel="icon" href="./img/favicon.ico">
   </head>
   <body>
-    <header id="header">
-      <div class="p-header">
-        <div class="l-inner">
-          <div class="p-header__left">
-            <h1 class="p-header-logo"><a href=""><img src="img/logo.svg" alt="logo"></a></h1>
-          </div>
-          <div class="p-header__right">
-            <nav class="p-header-nav">
-              <div class="drawer"><span class="drawer-icon"></span><span class="drawer-icon"></span><span class="drawer-icon"></span></div>
-              <div class="p-header-nav__list">
-                <ul>
-                  <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Profile</span><br><span class="p-header-nav__item__subtitle">自己紹介</span></a></li>
-                  <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Cording</span><br><span class="p-header-nav__item__subtitle">コーディングスキル</span></a></li>
-                  <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Tools</span><br><span class="p-header-nav__item__subtitle">使用可能ツール</span></a></li>
-                  <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Contact</span><br><span class="p-header-nav__item__subtitle">お問い合わせ</span></a></li>
-                </ul>
-              </div>
-            </nav>
-            <!-- p-header-nav END-->
-          </div>
-        </div>
+    <header class="p-header">
+      <div class="l-inner">
+        <h1 class="p-header-logo"><a href=""><img src="img/logo.svg" alt="logo"></a></h1>
+        <nav class="p-header-nav">
+          <ul class="p-header-nav__list">
+            <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Profile</span><br><span class="p-header-nav__item__subtitle">自己紹介</span></a></li>
+            <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Cording</span><br><span class="p-header-nav__item__subtitle">コーディングスキル</span></a></li>
+            <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Tools</span><br><span class="p-header-nav__item__subtitle">使用可能ツール</span></a></li>
+            <li class="p-header-nav__item"><a href=""><span class="p-header-nav__item__title">Contact</span><br><span class="p-header-nav__item__subtitle">お問い合わせ</span></a></li>
+          </ul>
+          <!-- p-header-nav END-->
+        </nav>
       </div>
     </header>
     <!-- header END-->
+    <div class="c-drawer c-drawer--right">
+      <input id="c-drawer__check" type="checkbox">
+      <label class="c-drawer__open" for="c-drawer__check"><span></span></label>
+      <label class="c-drawer__close" for="c-drawer__check"></label>
+      <div class="c-drawer__content">
+        <nav class="c-drawer__nav">
+          <ul class="c-drawer__list">
+            <li class="c-drawer__item"><a href="#"><span class="c-drawer__item__title">Profile</span><span class="c-drawer__item__subtitle">自己紹介</span></a></li>
+            <li class="c-drawer__item"><a href="#"><span class="c-drawer__item__title">Cording</span><span class="c-drawer__item__subtitle">コーディングスキル</span></a></li>
+            <li class="c-drawer__item"><a href="#"><span class="c-drawer__item__title">Tools</span><span class="c-drawer__item__subtitle">使用可能ツール</span></a></li>
+            <li class="c-drawer__item"><a href="#"><span class="c-drawer__item__title">Contact</span><span class="c-drawer__item__subtitle">問い合わせ</span></a></li>
+          </ul>
+        </nav>
+        <!-- c-drawer__content END-->
+      </div>
+      <!-- c-drawer END-->
+    </div>
+    <!-- p-header__drawer END-->
     <div id="mv">
       <div class="l-inner">
         <p class="p-mv__title">Welcome<br>to<br>My Portfolio</p>
@@ -112,4 +122,7 @@
     </footer>
     <!-- footer END-->
   </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./js/script.js"></script>
+  <!-- body END-->
 </html>

@@ -1,0 +1,197 @@
+// ---------- drawer ----------
+.c-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: map-get($layer, "drawer");
+  display: none;
+  @include mq("sp") {
+    display: block;
+  }
+}
+
+#c-drawer__check {
+  display: none;
+}
+
+// 開くボタン
+.c-drawer__open {
+  display: inline-block;
+  width: $drawer-icon-width;
+  height: $drawer-icon-height;
+  vertical-align: middle;
+  position: relative;
+  transition: $drawer-speed ease-in-out;
+  cursor: pointer;
+  background: $bar-bg;
+  z-index: map-get($layer, "drawer") + 1;
+  // ハンバーガーアイコン
+  // 真ん中の棒
+  span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    height: $bar-height;
+    width: $bar-width;
+    margin: (-$bar-height/2) 0 0 (-$bar-width/2);
+    background: $bar-color;
+    border-radius: $bar-radius;
+    transition: $drawer-speed ease-in-out;
+    // 上下の棒
+    &::before,
+    &::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: $bar-radius;
+      background: $bar-color;
+      display: block;
+      content: "";
+      cursor: pointer;
+      margin: (-$bar-height/2) 0 0 -50%;
+      top: 50%;
+      left: 50%;
+      transform: rotate(0);
+      transition: $drawer-speed ease-in-out;
+    }
+    &::before {
+      margin-top: -$bar-height - $bar-height/2 - $bar-space;
+    }
+    &::after {
+      margin-top: $bar-height/2 + $bar-space;
+    }
+  }
+}
+
+// 暗幕レイヤー（起動前）
+.c-drawer__close {
+  display: none;
+  position: fixed;
+  z-index: map-get($layer, "drawer") - 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0;
+}
+
+// ドロワー本体（起動前）
+.c-drawer__content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: map-get($layer, "drawer");
+  width: $drawer-width;
+  max-width: 90%;
+  height: 100%;
+  background: $main-cr;
+  transition: $drawer-speed ease-in-out;
+  transform: translateX(-105%);
+  padding-top: $header-height;
+  .drawer-title {
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 34px;
+  }
+}
+
+
+#c-drawer__check:checked {
+  ~.c-drawer__open {
+    span {
+      background: rgba($bar-color, 0);
+      &::before,
+      &::after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        border-radius: $bar-radius;
+        width: $bar-width;
+        height: $bar-height;
+        margin: (-$bar-height/2) 0 0 (-$bar-width/2);
+        background: $bar-color;
+      }
+      &::before {
+        transform: rotate(-45deg);
+      }
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+  ~.c-drawer__close {
+    display: block;
+    opacity: 0.4;
+    @keyframes show {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0.4;
+      }
+    }
+    animation: show $drawer-speed ease-in-out;
+  }
+  ~.c-drawer__content {
+    transform: translateX(0);
+    box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+  }
+}
+
+
+/* 右寄せ */
+.c-drawer {
+  &.c-drawer--right {
+    left: auto;
+    right: 0;
+  }
+}
+
+.c-drawer__content {
+  .c-drawer.c-drawer--right & {
+    left: auto;
+    right: 0;
+    transform: translateX(105%);
+    text-align: left;
+  }
+}
+
+#c-drawer__check:checked {
+  ~.c-drawer__content {
+    .c-drawer.c-drawer--right & {
+      transform: translateX(0);
+    }
+  }
+}
+
+
+// .c-drawer__item {
+//   a {
+//     text-decoration: none;
+//     color: $white;
+//     display: block;
+//     margin-left: 16px;
+//     margin-bottom: 8px;
+//     border-bottom: 1px solid rgba($white, 0.7);
+//   }
+// }
+
+// .c-drawer__item__title {
+//   font-size: 20px;
+// }
+
+// .c-drawer-item-subtitle {
+//   font-size: 10px;
+// }
+
+// .c-drawer-item-active {
+//   a {
+//     border-bottom-color: $accent-cr;
+//   }
+// }

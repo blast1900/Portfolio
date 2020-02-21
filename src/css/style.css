@@ -1,5 +1,3 @@
-
-@import url("https://fonts.googleapis.com/earlyaccess/notosansjapanese.css");
 @charset "UTF-8";
 /*!
  * ress.css • v2.0.4
@@ -228,30 +226,141 @@ svg:not([fill]) {
 /* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
 [aria-disabled] {
   cursor: default; }
+.c-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  display: none; }
+@media screen and (max-width: 767px) {
+    .c-drawer {
+      display: block; } }
+#c-drawer__check {
+  display: none; }
+.c-drawer__open {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+  background: #123E97;
+  z-index: 41; }
+.c-drawer__open span {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    height: 4px;
+    width: 28px;
+    margin: -2px 0 0 -14px;
+    background: #fff;
+    border-radius: 3px;
+    transition: 0.3s ease-in-out; }
+.c-drawer__open span::before, .c-drawer__open span::after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 3px;
+      background: #fff;
+      display: block;
+      content: "";
+      cursor: pointer;
+      margin: -2px 0 0 -50%;
+      top: 50%;
+      left: 50%;
+      transform: rotate(0);
+      transition: 0.3s ease-in-out; }
+.c-drawer__open span::before {
+      margin-top: -10px; }
+.c-drawer__open span::after {
+      margin-top: 6px; }
+.c-drawer__close {
+  display: none;
+  position: fixed;
+  z-index: 39;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0; }
+.c-drawer__content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 40;
+  width: 250px;
+  max-width: 90%;
+  height: 100%;
+  background: #123E97;
+  transition: 0.3s ease-in-out;
+  transform: translateX(-105%);
+  padding-top: 60px; }
+.c-drawer__content .drawer-title {
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 34px; }
+#c-drawer__check:checked ~ .c-drawer__open span {
+  background: rgba(255, 255, 255, 0); }
+#c-drawer__check:checked ~ .c-drawer__open span::before, #c-drawer__check:checked ~ .c-drawer__open span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 3px;
+    width: 28px;
+    height: 4px;
+    margin: -2px 0 0 -14px;
+    background: #fff; }
+#c-drawer__check:checked ~ .c-drawer__open span::before {
+    transform: rotate(-45deg); }
+#c-drawer__check:checked ~ .c-drawer__open span::after {
+    transform: rotate(45deg); }
+#c-drawer__check:checked ~ .c-drawer__close {
+  display: block;
+  opacity: 0.4;
+  -webkit-animation: show 0.3s ease-in-out;
+          animation: show 0.3s ease-in-out; }
+@-webkit-keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.4; } }
+@keyframes show {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 0.4; } }
+#c-drawer__check:checked ~ .c-drawer__content {
+  transform: translateX(0);
+  box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16); }
+/* 右寄せ */
+.c-drawer.c-drawer--right {
+  left: auto;
+  right: 0; }
+.c-drawer.c-drawer--right .c-drawer__content {
+  left: auto;
+  right: 0;
+  transform: translateX(105%);
+  text-align: left; }
+.c-drawer.c-drawer--right #c-drawer__check:checked ~ .c-drawer__content {
+  transform: translateX(0); }
 html {
   font-size: 62.5%; }
 body {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
-  color: #fff;
+  color: #6F7579;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #FFF;
   overflow-x: hidden; }
-.inner {
-  margin: 0 auto;
-  padding: 24px 24px;
-  max-width: 100%;
-  width: 1199px; }
-@media screen and (max-width: 1198px) {
-    .inner {
-      padding-right: 24px;
-      padding-left: 24px; } }
-@media screen and (max-width: 767px) {
-    .inner {
-      padding-right: 12px;
-      padding-left: 12px; } }
 img {
   width: auto;
   height: auto;
@@ -260,4 +369,99 @@ img {
   vertical-align: bottom; }
 p {
   margin-bottom: 0; }
+.section-title {
+  font-size: 4.0rem;
+  color: #123E97;
+  text-align: center; }
+.section-subtitle {
+  display: block;
+  font-size: 1.6rem; }
+.section-description {
+  width: 100%;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 32px; }
+.header-logo {
+  width: 120px;
+  height: 40px; }
+@media screen and (max-width: 767px) {
+  .header-nav {
+    display: none; } }
+.header-item {
+  display: inline-block;
+  text-align: center; }
+.header-item a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding-left: 16px; }
+.header-item-title {
+  font-size: 2.0rem;
+  font-weight: 600; }
+.header-item-subtitle {
+  font-size: 1.2rem;
+  font-weight: 600; }
+.drawer-open {
+  background-color: rgba(255, 255, 255, 0); }
+#mv {
+  height: 100vh;
+  background: url(../img/mv-bg.jpg) no-repeat center; }
+#mv .inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 62, 151, 0.2); }
+.mv-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6.0rem;
+  font-family: 'Raleway', sans-serif;
+  color: #fff; }
+@media screen and (max-width: 767px) {
+    .mv-title {
+      font-size: 4.0rem; } }
+.mv-scroll {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%); }
+.mv-scroll img {
+    width: 40px;
+    opacity: .9; }
+.profile-box {
+  margin-top: 64px;
+  display: flex; }
+@media screen and (max-width: 767px) {
+    .profile-box {
+      flex-direction: column; } }
+@media screen and (min-width: 768px) {
+  .profile-02 {
+    flex-direction: row-reverse; } }
+.profile-img {
+  width: 300px;
+  box-shadow: 24px 24px #123E97;
+  margin-right: 24px;
+  border: 3px solid #fff;
+  align-self: center; }
+@media screen and (max-width: 767px) {
+    .profile-img {
+      width: 80%;
+      box-shadow: 16px 16px #123E97;
+      max-width: 300px;
+      margin-bottom: 24px; } }
+.profile-content {
+  align-self: center;
+  flex: 1;
+  margin: 0 32px; }
+.profile-title {
+  font-size: 3.2rem;
+  color: #123E97; }
+.profile-subtitle {
+  font-size: 1.6rem; }
+.profile-description > p {
+  font-size: 1.6rem;
+  margin-top: .5em; }
 /*# sourceMappingURL=style.css.map */

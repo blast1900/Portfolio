@@ -1,0 +1,17 @@
+.l-inner {
+	margin: 0 auto;
+	padding-right: $inner-padding;
+	padding-left: $inner-padding;
+	max-width: 100%;
+	width: $layout-width-inner;
+
+	@include mq("tab") {
+		padding-right: $inner-padding-tab;
+		padding-left: $inner-padding-tab;
+	}
+
+	@include mq("sp") {
+		padding-right: $inner-padding-sp;
+		padding-left: $inner-padding-sp;
+	}
+}

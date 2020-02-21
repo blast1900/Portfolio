@@ -1,0 +1,39 @@
+#mv {
+  // width: 100vw;
+  height: 100vh;
+  background: url(../img/mv-bg.jpg) no-repeat center;
+
+  .inner {
+    width: 100%;
+    height: 100%;
+    background-color: rgba($main-cr, 0.2); 
+  }
+}
+
+.mv-title {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 6.0rem;
+  font-family: 'Raleway', sans-serif;
+  color: $white;
+
+  @include mq() {
+    font-size: 4.0rem;
+  }
+}
+
+.mv-scroll {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  img {
+    width: 40px;
+    opacity: .9;
+  }
+}
