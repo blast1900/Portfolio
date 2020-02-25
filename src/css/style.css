@@ -228,14 +228,14 @@ svg:not([fill]) {
   cursor: default; }
 .l-inner {
   margin: 0 auto;
-  padding-right: 24px;
-  padding-left: 24px;
+  padding-right: 60px;
+  padding-left: 60px;
   max-width: 100%;
   width: 1199px; }
 @media screen and (max-width: 1198px) {
     .l-inner {
-      padding-right: 24px;
-      padding-left: 24px; } }
+      padding-right: 36px;
+      padding-left: 36px; } }
 @media screen and (max-width: 767px) {
     .l-inner {
       padding-right: 24px;
@@ -384,7 +384,7 @@ html {
 body {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
   font-weight: 400;
-  color: #6F7579;
+  color: #333;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -401,7 +401,8 @@ p {
 .p-section {
   padding-bottom: 64px; }
 .p-section__header {
-  padding-top: 64px; }
+  padding-top: 64px;
+  margin-bottom: 64px; }
 .p-section__title {
   font-size: 4.0rem;
   color: #123E97;
@@ -514,13 +515,13 @@ p {
 .p-profile__description > p {
   font-size: 1.6rem;
   margin-top: .5em; }
-.p-cording {
-  background: url("../img/bg-code2.jpg") no-repeat center;
+.p-coding {
+  background: url("../img/coding-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
   z-index: 1; }
-.p-cording::after {
+.p-coding::after {
     content: "";
     position: absolute;
     top: 0;
@@ -529,7 +530,7 @@ p {
     width: 100%;
     background: rgba(18, 62, 151, 0.8);
     z-index: -1; }
-.p-cording__box {
+.p-coding__box {
   margin-top: 64px;
   margin-bottom: 24px;
   padding: 24px;
@@ -537,54 +538,84 @@ p {
   display: flex;
   position: relative; }
 @media screen and (max-width: 767px) {
-    .p-cording__box {
+    .p-coding__box {
       background: no-repeat center;
       background-size: contain;
       z-index: 1; }
-      .p-cording__box.p-cording__box--html {
-        background-image: url(../img/cording-html-01.png); }
-      .p-cording__box.p-cording__box--css {
-        background-image: url(../img/cording-html-01.png); }
-      .p-cording__box.p-cording__box--js {
-        background-image: url(../img/cording-html-01.png); }
-      .p-cording__box::after {
+      .p-coding__box.p-coding__box--html {
+        background-image: url(../img/coding-html-bg.png); }
+      .p-coding__box.p-coding__box--css {
+        background-image: url(../img/coding-css-bg.png); }
+      .p-coding__box.p-coding__box--js {
+        background-image: url(../img/coding-js-bg.png); }
+      .p-coding__box::after {
         content: "";
         position: absolute;
         top: 0;
         left: 0;
         height: 100%;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.9);
         z-index: -1; } }
 @media screen and (min-width: 768px) {
-  .p-cording--02 {
+  .p-coding--02 {
     flex-direction: row-reverse; } }
-.p-cording__img {
+.p-coding__img {
   width: 150px;
   margin-right: 24px;
   align-self: center;
   background-color: #123E97;
   padding: 10px; }
 @media screen and (max-width: 767px) {
-    .p-cording__img {
+    .p-coding__img {
       display: none;
       width: 80%;
       max-width: 300px;
       margin-bottom: 24px; } }
-.p-cording .p-section__title {
+.p-coding .p-section__title {
   color: #fff; }
-.p-cording .p-section__description {
+.p-coding .p-section__description {
   color: #fff; }
-.p-cording__content {
+.p-coding__content {
   align-self: center;
   flex: 1;
   margin: 0 32px; }
-.p-cording__box {
+.p-coding__box {
   background-color: #fff; }
-.p-cording__title {
+.p-coding__title {
   font-size: 3.2rem;
   color: #123E97; }
-.p-cording__description li {
+@media screen and (max-width: 767px) {
+    .p-coding__title {
+      text-align: center; } }
+.p-coding__description li {
+  font-size: 1.6rem;
+  margin-top: .5em; }
+.p-tools {
+  background-color: #fff; }
+.p-tools .p-section__content {
+    display: flex;
+    flex-wrap: wrap; }
+@media screen and (min-width: 768px) {
+  .p-tools__box {
+    margin: 0 48px 48px 0;
+    width: calc(33.3333333% - 96px / 3); }
+    .p-tools__box:nth-child(3n) {
+      margin-right: 0; } }
+@media screen and (max-width: 767px) {
+  .p-tools__box {
+    margin: 0 24px 36px 0;
+    width: calc(50% - 24px / 2); }
+    .p-tools__box:nth-child(2n) {
+      margin-right: 0; } }
+.p-tools__img {
+  margin: 0 auto;
+  width: 100px; }
+.p-tools__title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #123E97; }
+.p-tools__description {
   font-size: 1.6rem;
   margin-top: .5em; }
 /*# sourceMappingURL=style.css.map */

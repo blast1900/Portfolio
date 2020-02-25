@@ -5,7 +5,7 @@ html {
 body {
   font-family: $ff-gothic;
   font-weight: 400;
-  color: $gray;
+  color: $black;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -32,7 +32,7 @@ p {
 
 .p-section__header {
   padding-top: 64px;
-  // padding-bottom: 64px;
+  margin-bottom: 64px;
 }
 
 .p-section__title {

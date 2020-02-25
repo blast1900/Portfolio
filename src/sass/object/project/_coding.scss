@@ -1,5 +1,5 @@
-.p-cording {
-  background: url("../img/bg-code2.jpg") no-repeat center;
+.p-coding {
+  background: url("../img/coding-bg.jpg") no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
@@ -12,12 +12,12 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba($main-cr, 0.8);
+    background: rgba($sub-cr, 0.8);
     z-index: map-get($layer, bg);
   } 
 }
 
-.p-cording__box {
+.p-coding__box {
   margin-top: 64px; 
   margin-bottom: 24px; 
   padding: 24px;
@@ -29,14 +29,14 @@
     background: no-repeat center;
     background-size: contain;
     z-index: map-get($layer, default);
-    &.p-cording__box--html {
-      background-image: url(../img/cording-html-01.png);
+    &.p-coding__box--html {
+      background-image: url(../img/coding-html-bg.png);
     }
-    &.p-cording__box--css {
-      background-image: url(../img/cording-html-01.png);
+    &.p-coding__box--css {
+      background-image: url(../img/coding-css-bg.png);
     }
-    &.p-cording__box--js {
-      background-image: url(../img/cording-html-01.png);
+    &.p-coding__box--js {
+      background-image: url(../img/coding-js-bg.png);
     }
 
     &::after {
@@ -46,23 +46,23 @@
       left: 0;
       height: 100%;
       width: 100%;
-      background: rgba($white, 0.95);
+      background: rgba($white, 0.9);
       z-index: map-get($layer, bg);
     } 
   }
 }
 
-.p-cording--02 {
+.p-coding--02 {
   @include mq("tab-pc") {
     flex-direction: row-reverse;
   }
 }
 
-.p-cording__img {
+.p-coding__img {
   width: 150px;
   margin-right: 24px;
   align-self: center;
-  background-color: $main-cr;
+  background-color: $sub-cr;
   padding: 10px;
   
   @include mq() {
@@ -73,7 +73,7 @@
   }
 }
 
-.p-cording {
+.p-coding {
   .p-section__title {
     color: $white;
   }
@@ -82,22 +82,25 @@
   }
 }
 
-.p-cording__content {
+.p-coding__content {
   align-self: center; 
   flex: 1;
   margin: 0 32px;
 }
 
-.p-cording__box {
+.p-coding__box {
   background-color: $white;
 }
 
-.p-cording__title {
+.p-coding__title {
   font-size: 3.2rem;
   color: $main-cr;
+  @include mq() {
+    text-align: center;
+  }
 }
 
-.p-cording__description li {
+.p-coding__description li {
   font-size: 1.6rem;
   margin-top: .5em;
 }

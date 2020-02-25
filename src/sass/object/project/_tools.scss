@@ -1,0 +1,46 @@
+.p-tools {
+  background-color: $white;
+
+  .p-section__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.p-tools__box {
+  @include mq("tab-pc") {
+    margin: 0 48px 48px 0;
+    width: calc(33.3333333% - 96px / 3);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    } 
+  }
+
+  @include mq("sp") {
+    margin: 0 24px 36px 0;
+    width: calc(50% - 24px / 2);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    } 
+  }
+}
+
+
+
+.p-tools__img {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.p-tools__title {
+  text-align: center;
+  font-size: 2.4rem;
+  color: $main-cr;
+}
+
+.p-tools__description {
+  font-size: 1.6rem;
+  margin-top: .5em;
+}

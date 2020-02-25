@@ -1,7 +1,9 @@
 // --------------- color --------------
 // ベース色
 $main-cr: #123E97;
-$sub-cr: #F2F5FF;
+$sub-cr: #123E97;
+// $main-cr: #131fac;
+// $sub-cr: #1d6aa2;
 $accent-cr: #EDC168;
 
 // 背景
@@ -10,7 +12,7 @@ $bg-cr: #efefef;
 // テキスト色
 $black: #333;
 $white: #fff;
-$gray: #6F7579;
+$gray: #666;
 
 // 透過度
 $opacity: 0.6;
@@ -32,8 +34,8 @@ $cr-table: #eee;
 $layout-width-canvas: 1440px;
 $layout-width-inner: 1199px;
 
-$inner-padding: 24px;
-$inner-padding-tab: 24px;
+$inner-padding: 60px;
+$inner-padding-tab: 36px;
 $inner-padding-sp: 24px;
 
 
