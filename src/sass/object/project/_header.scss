@@ -1,8 +1,11 @@
 // header
 #p-header {
-  background-color: rgba($main-cr, 0);
+  // background-color: rgba($main-cr, 1);
+  // opacity: 0.9;
+  transition: 0.5s;
   position: fixed;
-  width: 99%;
+  width: 100%;
+  z-index: map-get($layer, "header");
 
   .l-inner {
     padding: 0 24px;
@@ -11,6 +14,10 @@
     justify-content: space-between;
     align-items: center;
   }
+}
+
+.p-header--top {
+  background-color: rgba($main-cr, 0);
 }
 
 .p-header-logo {
@@ -34,6 +41,11 @@
     text-decoration: none;
     color: $white;
     padding-left: 16px;
+    transition: 0.2s;
+
+    &:hover {
+      color: $accent-cr;
+    }
   }
 }
 

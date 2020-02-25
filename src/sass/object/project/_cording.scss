@@ -1,0 +1,104 @@
+.p-cording {
+  background: url("../img/bg-code2.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: map-get($layer, default);
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba($main-cr, 0.8);
+    z-index: map-get($layer, bg);
+  } 
+}
+
+.p-cording__box {
+  margin-top: 64px; 
+  margin-bottom: 24px; 
+  padding: 24px;
+  border: 10px double $main-cr;
+  display: flex;
+  position: relative;
+
+  @include mq() {
+    background: no-repeat center;
+    background-size: contain;
+    z-index: map-get($layer, default);
+    &.p-cording__box--html {
+      background-image: url(../img/cording-html-01.png);
+    }
+    &.p-cording__box--css {
+      background-image: url(../img/cording-html-01.png);
+    }
+    &.p-cording__box--js {
+      background-image: url(../img/cording-html-01.png);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba($white, 0.95);
+      z-index: map-get($layer, bg);
+    } 
+  }
+}
+
+.p-cording--02 {
+  @include mq("tab-pc") {
+    flex-direction: row-reverse;
+  }
+}
+
+.p-cording__img {
+  width: 150px;
+  margin-right: 24px;
+  align-self: center;
+  background-color: $main-cr;
+  padding: 10px;
+  
+  @include mq() {
+    display: none;
+    width: 80%;
+    max-width: 300px;
+    margin-bottom: 24px;
+  }
+}
+
+.p-cording {
+  .p-section__title {
+    color: $white;
+  }
+  .p-section__description {
+    color: $white;
+  }
+}
+
+.p-cording__content {
+  align-self: center; 
+  flex: 1;
+  margin: 0 32px;
+}
+
+.p-cording__box {
+  background-color: $white;
+}
+
+.p-cording__title {
+  font-size: 3.2rem;
+  color: $main-cr;
+}
+
+.p-cording__description li {
+  font-size: 1.6rem;
+  margin-top: .5em;
+}
+

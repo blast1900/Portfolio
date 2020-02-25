@@ -1,5 +1,10 @@
+#p-profile {
+  background-color: $white;
+}
+
 .p-profile__box {
   margin-top: 64px; 
+  margin-bottom: 24px; 
   display: flex;
   @include mq() {
     flex-direction: column;

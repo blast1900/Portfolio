@@ -9,7 +9,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #FFF;
+  background-color: $main-cr;
   overflow-x: hidden;
 }
 
@@ -26,6 +26,15 @@ p {
 }
 
 // content
+.p-section {
+  padding-bottom: 64px;
+}
+
+.p-section__header {
+  padding-top: 64px;
+  // padding-bottom: 64px;
+}
+
 .p-section__title {
   font-size: 4.0rem;
   color: $main-cr;

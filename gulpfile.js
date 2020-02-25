@@ -60,7 +60,7 @@ function watchFiles(done){
   gulp.watch("./src/sass/**", sassCompile);
   gulp.watch("./src/pug/**", pugCompile);
   gulp.watch("./src/*.html", browserReload);
-  gulp.watch("./src/css/*.css", browserReload);
+  gulp.watch("./src/css/**", browserReload);
   gulp.watch("./src/js/*.js", browserReload);
   done();
 }

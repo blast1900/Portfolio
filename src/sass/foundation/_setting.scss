@@ -2,7 +2,7 @@
 // ベース色
 $main-cr: #123E97;
 $sub-cr: #F2F5FF;
-$accent-cr: #e65100;
+$accent-cr: #EDC168;
 
 // 背景
 $bg-cr: #efefef;
@@ -62,7 +62,8 @@ $layer: (
 	floating: 30,
 	header: 20,
 	footer: 10,
-	default: 1
+	default: 1,
+  bg: -1
 );
 
 // ドロワー
