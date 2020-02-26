@@ -91,12 +91,6 @@
   transition: $drawer-speed ease-in-out;
   transform: translateX(-105%);
   padding-top: $header-height;
-  .drawer-title {
-    font-size: 1em;
-    font-weight: 700;
-    text-align: center;
-    padding: 0 34px;
-  }
 }
 
 
@@ -177,17 +171,24 @@
     color: $white;
     display: block;
     margin-left: 16px;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
     border-bottom: 1px solid rgba($white, 0.7);
+    transition: 0.2s;
+
+    &:hover {
+      color: $accent-cr;
+      border-bottom: 1px solid rgba($accent-cr, 0.7);
+    }
   }
 }
 
 .c-drawer__item__title {
   font-size: 20px;
+  padding-right: 12px;
 }
 
 .c-drawer-item-subtitle {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .c-drawer-item-active {

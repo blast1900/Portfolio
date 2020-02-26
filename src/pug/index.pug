@@ -16,33 +16,33 @@ html(lang='ja')
   body
     header#p-header
       div.l-inner
-        h1.p-header-logo
-          a(href="")
-            img(src="img/logo.svg" alt="logo")
+        h1
+          a(href="#p-mv").p-header-logo
+            //- img(src="img/logo.svg" alt="logo")
         nav.p-header-nav
           ul.p-header-nav__list
             li.p-header-nav__item
-              a(href="")
+              a(href="#p-profile")
                 span.p-header-nav__item__title Profile
                 br
                 span.p-header-nav__item__subtitle 自己紹介
             li.p-header-nav__item
-              a(href="")
+              a(href="#p-coding")
                 span.p-header-nav__item__title Coding
                 br
                 span.p-header-nav__item__subtitle コーディングスキル
             li.p-header-nav__item
-              a(href="")
+              a(href="#p-tools")
                 span.p-header-nav__item__title Tools
                 br
                 span.p-header-nav__item__subtitle 使用可能ツール
             li.p-header-nav__item
-              a(href="")
-                span.p-header-nav__item__title Work
+              a(href="#p-works")
+                span.p-header-nav__item__title Works
                 br
                 span.p-header-nav__item__subtitle 作品
             li.p-header-nav__item
-              a(href="")
+              a(href="#p-contact")
                 span.p-header-nav__item__title Contact
                 br
                 span.p-header-nav__item__subtitle お問い合わせ
@@ -70,6 +70,10 @@ html(lang='ja')
                 span.c-drawer__item__subtitle 使用可能ツール
             li.c-drawer__item
               a(href="#")
+                span.c-drawer__item__title Works
+                span.c-drawer__item__subtitle 作品
+            li.c-drawer__item
+              a(href="#")
                 span.c-drawer__item__title Contact
                 span.c-drawer__item__subtitle 問い合わせ
         // c-drawer__content END
@@ -81,7 +85,7 @@ html(lang='ja')
         div.p-mv__scroll
           img(src="img/arrow.svg", alt="")
     //mv END
-    div#p-content
+    div.p-content
       section#p-profile.p-section
         div.l-inner
           div.p-section__header
@@ -124,7 +128,7 @@ html(lang='ja')
             // profile--03 END
       // section profile END
 
-      section.p-coding.p-section
+      section#p-coding.p-section
         div.l-inner
           div.p-section__header
             h2.p-section__title Coding
@@ -177,7 +181,7 @@ html(lang='ja')
                     li.p-coding__description__item 構造化マークアップを用いてリッチスニペットに対応できます。
       // section coding END
 
-      section.p-tools.p-section
+      section#p-tools.p-section
         div.l-inner
           div.p-section__header
             h2.p-section__title Tools
@@ -258,7 +262,7 @@ html(lang='ja')
                 p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
       // section tools END
   
-      section.p-works.p-section
+      section#p-works.p-section
         div.l-inner
           div.p-section__header
             h2.p-section__title Works
@@ -279,7 +283,7 @@ html(lang='ja')
                 img(src="img/sample-page01.png", alt="")
       // section works END
 
-      section#contact.p-section
+      section#p-contact.p-section
         div.l-inner
           div.p-section__header
             h2.p-section__title Contact
