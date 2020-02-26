@@ -36,4 +36,7 @@ jQuery(function() {
 		);
 		return false;
 	});
+
+  // WOW
+  new WOW().init();
 });

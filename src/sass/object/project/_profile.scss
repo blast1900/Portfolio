@@ -6,14 +6,13 @@
   margin-top: 64px; 
   margin-bottom: 24px; 
   display: flex;
+  @include mq("tab-pc") {
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
   @include mq() {
     flex-direction: column;
-  }
-}
-
-.p-profile--02 {
-  @include mq("tab-pc") {
-    flex-direction: row-reverse;
   }
 }
 
@@ -41,10 +40,14 @@
 .p-profile__title {
   font-size: 3.2rem;
   color: $main-cr;
+  @include mq() {
+    font-size: 2.4rem;
+  }
 }
 
 .p-profile__subtitle {
   font-size: 1.6rem;
+  margin-left: 16px;
 }
 
 .p-profile__description > p {
