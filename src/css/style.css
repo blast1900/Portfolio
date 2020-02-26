@@ -658,4 +658,9 @@ p {
   margin-top: .5em; }
 #contact {
   background-color: #fff; }
+.p-footer__copy {
+  color: #fff;
+  text-align: center;
+  font-size: 1.6rem;
+  padding: 24px; }
 /*# sourceMappingURL=style.css.map */
