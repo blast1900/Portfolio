@@ -470,18 +470,46 @@ p {
   text-align: center;
   font-size: 6.0rem;
   font-family: 'Raleway', sans-serif;
-  color: #fff; }
+  color: #fff;
+  cursor: default; }
 @media screen and (max-width: 767px) {
     .p-mv__title {
       font-size: 4.0rem; } }
 .p-mv__scroll {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
   position: absolute;
   bottom: 10%;
   left: 50%;
-  transform: translateX(-50%); }
-.p-mv__scroll img {
-    width: 40px;
-    opacity: .9; }
+  opacity: .9;
+  transition: 0.2s;
+  -webkit-animation: mv-scroll-anime 1s linear infinite;
+          animation: mv-scroll-anime 1s linear infinite;
+  cursor: pointer; }
+.p-mv__scroll:hover {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused; }
+.p-mv__scroll:hover .p-mv__scroll__img {
+      background-image: url(../img/mv-arrow-hover.svg); }
+.p-mv__scroll__img {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/mv-arrow.svg); }
+@-webkit-keyframes mv-scroll-anime {
+  0% {
+    transform: translate(-50%, 0); }
+  50% {
+    transform: translate(-50%, -12px); }
+  100% {
+    transform: translate(-50%, 0); } }
+@keyframes mv-scroll-anime {
+  0% {
+    transform: translate(-50%, 0); }
+  50% {
+    transform: translate(-50%, -12px); }
+  100% {
+    transform: translate(-50%, 0); } }
 #p-profile {
   background-color: #fff; }
 .p-profile__box {

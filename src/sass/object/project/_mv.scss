@@ -1,9 +1,6 @@
 #p-mv {
-  // width: 100vw;
   height: 100vh;
   background: url(../img/mv-bg.jpg) no-repeat center;
-  // background-attachment: fixed;
-
 
   .l-inner {
     width: 100%;
@@ -22,6 +19,7 @@
   font-size: 6.0rem;
   font-family: 'Raleway', sans-serif;
   color: $white;
+  cursor: default;
 
   @include mq() {
     font-size: 4.0rem;
@@ -29,13 +27,34 @@
 }
 
 .p-mv__scroll {
+  width: 80px;
+  height: 80px;
+  padding: 20px;
   position: absolute;
   bottom: 10%;
   left: 50%;
-  transform: translateX(-50%);
+  opacity: .9;
+  transition: 0.2s;
+  animation: mv-scroll-anime 1s linear infinite;
+  cursor: pointer;
 
-  img {
-    width: 40px;
-    opacity: .9;
+  &:hover {
+    animation-play-state: paused;
+
+    .p-mv__scroll__img {
+      background-image: url(../img/mv-arrow-hover.svg);
+    }
   }
+}
+
+.p-mv__scroll__img {
+  width: 40px;
+  height: 40px;
+  background-image: url(../img/mv-arrow.svg);
+}
+ 
+@keyframes mv-scroll-anime {
+  0% { transform: translate(-50%, 0) }
+  50% { transform: translate(-50%, -12px) }
+  100% { transform: translate(-50%, 0) }
 }
