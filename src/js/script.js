@@ -21,7 +21,7 @@ jQuery(function() {
 		let speed = 1000;
 		let id = jQuery(this).attr("href");
 		let target = jQuery("#" == id ? "html" : id);
-		let position = jQuery(target).offset().top - header;
+		let position = jQuery(target).offset().top - header + 1;
 		if ("fixed" !== jQuery("#p-header").css("position")) {
 			position = jQuery(target).offset().top;
 		}

@@ -371,7 +371,7 @@ svg:not([fill]) {
     color: #EDC168;
     border-bottom: 1px solid rgba(237, 193, 104, 0.7); }
 .c-drawer__item__title {
-  font-size: 20px;
+  font-size: 24px;
   padding-right: 12px; }
 .c-drawer-item-subtitle {
   font-size: 12px; }
@@ -421,8 +421,8 @@ p {
   width: 100%;
   z-index: 20; }
 #p-header .l-inner {
-    padding: 0 24px;
     height: 60px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
