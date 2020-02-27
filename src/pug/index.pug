@@ -5,13 +5,26 @@ html(lang='ja')
     meta(name='viewport' content='width=device-width, initial-scale=1.0')
     meta(name='format-detection' content='telephone=no')
     link(rel='stylesheet' href='css/ress.css')
+    script(src="https://kit.fontawesome.com/e199f679fa.js" crossorigin="anonymous")
     link(rel='stylesheet' href!='https://fonts.googleapis.com/css?family=Raleway&display=swap')
     link(rel="stylesheet" href="mailform/css/mailform.css")
     link(rel='stylesheet' href='css/animate.css')
+    link(rel='stylesheet' href='css/modaal.min.css')
     link(rel='stylesheet' href='css/style.css')
     title タイトル
     meta(name='description' content='')
     meta(name='keywords' content='')
+
+  - var menuTitle01 = "Profile"
+  - var menuSubTitle01 = "自己紹介"
+  - var menuTitle02 = "Coding"
+  - var menuSubTitle02 = "コーディングスキル"
+  - var menuTitle03 = "Tools"
+  - var menuSubTitle03 = "使用可能ツール"
+  - var menuTitle04 = "Works"
+  - var menuSubTitle04 = "作品"
+  - var menuTitle05 = "Contact"
+  - var menuSubTitle05 = "お問い合わせ"
 
   body
     header#p-header
@@ -22,29 +35,29 @@ html(lang='ja')
           ul.p-header-nav__list
             li.p-header-nav__item
               a(href="#p-profile")
-                span.p-header-nav__item__title Profile
+                span.p-header-nav__item__title #{menuTitle01}
                 br
-                span.p-header-nav__item__subtitle 自己紹介
+                span.p-header-nav__item__subtitle #{menuSubTitle01}
             li.p-header-nav__item
               a(href="#p-coding")
-                span.p-header-nav__item__title Coding
+                span.p-header-nav__item__title #{menuTitle02}
                 br
-                span.p-header-nav__item__subtitle コーディングスキル
+                span.p-header-nav__item__subtitle #{menuSubTitle02}
             li.p-header-nav__item
               a(href="#p-tools")
-                span.p-header-nav__item__title Tools
+                span.p-header-nav__item__title #{menuTitle03}
                 br
-                span.p-header-nav__item__subtitle 使用可能ツール
+                span.p-header-nav__item__subtitle #{menuSubTitle03}
             li.p-header-nav__item
               a(href="#p-works")
-                span.p-header-nav__item__title Works
+                span.p-header-nav__item__title #{menuTitle04}
                 br
-                span.p-header-nav__item__subtitle 作品
+                span.p-header-nav__item__subtitle #{menuSubTitle04}
             li.p-header-nav__item
               a(href="#p-contact")
-                span.p-header-nav__item__title Contact
+                span.p-header-nav__item__title #{menuTitle05}
                 br
-                span.p-header-nav__item__subtitle お問い合わせ
+                span.p-header-nav__item__subtitle #{menuSubTitle05}
           // p-header-nav END
     // header END
 
@@ -58,24 +71,24 @@ html(lang='ja')
           ul.c-drawer__list
             li.c-drawer__item
               a(href="#p-profile")
-                span.c-drawer__item__title Profile
-                span.c-drawer__item__subtitle 自己紹介
+                span.c-drawer__item__title #{menuTitle01}
+                span.c-drawer__item__subtitle #{menuSubTitle01}
             li.c-drawer__item
               a(href="#p-coding")
-                span.c-drawer__item__title Coding
-                span.c-drawer__item__subtitle コーディングスキル
+                span.c-drawer__item__title #{menuTitle02}
+                span.c-drawer__item__subtitle #{menuSubTitle02}
             li.c-drawer__item
               a(href="#p-tools")
-                span.c-drawer__item__title Tools
-                span.c-drawer__item__subtitle 使用可能ツール
+                span.c-drawer__item__title #{menuTitle03}
+                span.c-drawer__item__subtitle #{menuSubTitle03}
             li.c-drawer__item
               a(href="#p-works")
-                span.c-drawer__item__title Works
-                span.c-drawer__item__subtitle 作品
+                span.c-drawer__item__title #{menuTitle04}
+                span.c-drawer__item__subtitle #{menuSubTitle04}
             li.c-drawer__item
               a(href="#p-contact")
-                span.c-drawer__item__title Contact
-                span.c-drawer__item__subtitle 問い合わせ
+                span.c-drawer__item__title #{menuTitle05}
+                span.c-drawer__item__subtitle #{menuSubTitle05}
         // c-drawer__content END
       // c-drawer END
     // p-header__drawer END
@@ -93,7 +106,7 @@ html(lang='ja')
           div.p-section__header
             h2.p-section__title Profile
               span.p-section__subtitle 自己紹介
-            p.p-section__description ポートフォリオをご覧頂きありがとうございます。<br>WEBエンジニアとして就職活動中の <b>米倉 康弘（よねくら やすひろ）</b>と申します。
+            p.p-section__description ポートフォリオをご覧頂きありがとうございます。<br>WEBエンジニアとして就職活動中の 米倉 康弘（よねくら やすひろ）と申します。
           div.p-section__content
             div.p-profile__box
               div.p-profile__img.wow.fadeInLeft
@@ -138,7 +151,7 @@ html(lang='ja')
               span.p-section__subtitle コーディングスキル
             p.p-section__description コーディングに関するスキルを紹介します。
           div.p-section__content
-            div.p-coding__box.p-coding__box--html.wow.fadeInUpBig
+            div.p-coding__box.wow.slideInRight
               div.p-coding__img
                 img(src="img/coding-html.svg", alt="")
               div.p-coding__content
@@ -146,48 +159,45 @@ html(lang='ja')
                 div.p-coding__description
                   ul
                     li.p-coding__description__item タグの意味を理解し、W3C標準に準拠したセマンティックなマークアップができます。
-                    li.p-coding__description__item head内に書くべきタグを理解し、クローラとユーザーに分かりやすい情報を記述することが出来ます。
                     li.p-coding__description__item APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
                     li.p-coding__description__item 構造化マークアップを用いてリッチスニペットに対応できます。
             // coding__box html END
 
-            div.p-coding__box.p-coding__box--css.wow.fadeInUpBig
+            div.p-coding__box.wow.slideInRight
               div.p-coding__img
                 img(src="img/coding-css.svg", alt="")
               div.p-coding__content
-                h3.p-coding__title HTML
+                h3.p-coding__title CSS
                 div.p-coding__description
                   ul
-                    li.p-coding__description__item タグの意味を理解し、W3C標準に準拠したセマンティックなマークアップができます。
-                    li.p-coding__description__item head内に書くべきタグを理解し、クローラとユーザーに分かりやすい情報を記述することが出来ます。
-                    li.p-coding__description__item APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-                    li.p-coding__description__item 構造化マークアップを用いてリッチスニペットに対応できます。
+                    li.p-coding__description__item サイズの相対指定、メディアクエリなどを用いてリキッドレイアウトのレスポンシブデザインに対応できます。
+                    li.p-coding__description__item Bootstrapを用いたコーディングを行うことができます。
+                    li.p-coding__description__item FLOCSS などの設計思想を理解し、保守性の高いクラス設計を行うことができます。
             // coding__box css END
 
-            div.p-coding__box.p-coding__box--js.wow.fadeInUpBig
+            div.p-coding__box.wow.slideInRight
               div.p-coding__img
                 img(src="img/coding-js.svg", alt="")
               div.p-coding__content
-                h3.p-coding__title HTML
+                h3.p-coding__title JavaScript
                 div.p-coding__description
                   ul
-                    li.p-coding__description__item タグの意味を理解し、W3C標準に準拠したセマンティックなマークアップができます。
-                    li.p-coding__description__item head内に書くべきタグを理解し、クローラとユーザーに分かりやすい情報を記述することが出来ます。
-                    li.p-coding__description__item APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-                    li.p-coding__description__item 構造化マークアップを用いてリッチスニペットに対応できます。
+                    li.p-coding__description__item 求める動きに必要なjQueryプラグイン、jsライブラリを選択し実装することができます。
+                    li.p-coding__description__item JavaScript,jQueryの基本構文を理解し、簡単な動きであればゼロベースで書くことができます。
+                    li.p-coding__description__item DOMの概念を理解し、動的にページを書き換えることができます。
             // coding__box js END
 
-            div.p-coding__box.p-coding__box--wp.wow.fadeInUpBig
+            div.p-coding__box.wow.slideInRight
               div.p-coding__img
                 img(src="img/coding-wp.svg", alt="")
               div.p-coding__content
-                h3.p-coding__title HTML
+                h3.p-coding__title WordPress
                 div.p-coding__description
                   ul
-                    li.p-coding__description__item タグの意味を理解し、W3C標準に準拠したセマンティックなマークアップができます。
-                    li.p-coding__description__item head内に書くべきタグを理解し、クローラとユーザーに分かりやすい情報を記述することが出来ます。
-                    li.p-coding__description__item APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-                    li.p-coding__description__item 構造化マークアップを用いてリッチスニペットに対応できます。
+                    li.p-coding__description__item WordPressを用いたブログ運営経験があり、ひと通りの使用方法を理解しています。
+                    li.p-coding__description__item 静的ページのWordPres化を行うことができます。
+                    li.p-coding__description__item PHPの基本構文・WordPress関数を理解しており、投稿機能付きの独自テーマを作成できます。
+                    li.p-coding__description__item ローカル開発環境の構築からサーバーへの実装までを行うことができます。
             // coding__box wp END
       // section coding END
 
@@ -198,78 +208,103 @@ html(lang='ja')
               span.p-section__subtitle 使用可能ツール
             p.p-section__description 使用可能なツールを紹介します。
           div.p-section__content
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+            div.p-tools__box
+              div.p-tools__img.p-tools--pug
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Pug
+                p.p-tools__description 基本的な記述方法に加え、変数、includeなどを用いて効率的にコーディングを行えます。
+
+            div.p-tools__box
+              div.p-tools__img.p-tools--sass
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Sass
+                p.p-tools__description Pugと同様に、変数、includeなどを用いて効率的にコーディングを行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--gulp
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Gulp
+                p.p-tools__description Gulpを用いて自動コンパイルやブラウザ同期などを必要に応じて実装できます。導入に必要なNode.jsやnpmなどの使い方も理解しています。
+
+            div.p-tools__box
+              div.p-tools__img.p-tools--photoshop
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Photoshop
+                p.p-tools__description 画像のスライス、用途に合わせた書き出し、簡単なレタッチなどを行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--illustrator
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Illustrator
+                p.p-tools__description 画像のスライス、用途に合わせた書き出し、簡単なイラストの作成などを行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--xd
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title XD
+                p.p-tools__description 画像やテキスト情報などの抽出、プロトタイプの作成などを行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--git
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Git
+                p.p-tools__description Git/Githubの基本的な使用方法に加え、複数人での開発を想定したブランチの運用も理解しています。
+
+            div.p-tools__box
+              div.p-tools__img.p-tools--unix
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title UNIXコマンド
+                p.p-tools__description ファイルやディレクトリの操作をUNIXコマンドを用いて行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--vscode
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title VScode
+                p.p-tools__description エディターはVScodeを使用しており、プラグインなどを用いて効率的にコーディングを行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--office
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title Officeソフト
+                p.p-tools__description ExcelなどのOfficeソフトは実務で使用していたため、主要な操作はひと通り行えます。
+            
+            div.p-tools__box
+              div.p-tools__img.p-tools--developer
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
-            div.p-tools__box.p-tools__box--html
-              div.p-tools__img
-                img(src="img/wordpress-icon.svg", alt="")
+                h3.p-tools__title デベロッパーツール
+                p.p-tools__description Elements・Consoleパネルを使用した表示の検証や、Networkパネルを使用した速度の検証を行えます。
+
+            div.p-tools__box
+              div.p-tools__img.p-tools--check
               div.p-tools__content
-                h3.p-tools__title HTML
-                p.p-tools__description APIを利用した、各種SNS、Googleマップ、Youtubeなどの埋め込み、シェアボタンの設置に対応出来ます。
+                h3.p-tools__title チェックリスト
+                p.p-tools__description コーディングの品質を担保するためチェックリストを使用しています。
+                a#js-checklist__button.p-checklist__button チェックリストを表示する
+                div#js-checklist__modal(style="display: none;")
+                  div.p-checklist__modal
+                    p.p-checklist__title Check List
+                    ul.p-checklist__list
+                      li.p-checklist__item 誤字脱字がないか
+                      li.p-checklist__item フォントが適切に設定されているか
+                      li.p-checklist__item 色はデザインカンプ通りか
+                      li.p-checklist__item デザインカンプの効果をCSSで表現できているか（box-shadow、opacityなど）
+                      li.p-checklist__item hover時の挙動は正しく設定されているか
+                      li.p-checklist__item JavaScriptの挙動は正しいか
+                      li.p-checklist__item デザインカンプとWebサイトを見比べてズレがないか
+                      li.p-checklist__item スムーズにレスポンシブされるか
+                      li.p-checklist__item 水平スクロールしないか
+                      li.p-checklist__item 改行位置は適切か
+                      li.p-checklist__item スマホ（320px）、タブレット（768px）、PC（カンプ）の3パターンの表示に崩れはないか
+                      li.p-checklist__item Chrome、FireFox、Safari、Edge（IE）で表示崩れが起きていないか
+                      li.p-checklist__item 担保しているブラウザverを把握しているか
+                      li.p-checklist__item メタ情報は正しく設定されているか
+                      li.p-checklist__item 見出し構造が不自然ではないか
+                      li.p-checklist__item 画像の形式・サイズ・圧縮率は適切か
+                      li.p-checklist__item altは正しく設定されているか
+                      li.p-checklist__item 閉じタグは正しく対応しているか
+                      li.p-checklist__item W3Cの標準規格に沿っているか（HTML、CSS）
+                      li.p-checklist__item リンク切れが起きていないか
+                      li.p-checklist__item コンソールエラー・ネットワークエラーが出てないか
       // section tools END
   
       section#p-works.p-section
@@ -425,6 +460,7 @@ html(lang='ja')
   script(src="js/jquery.ripples-min.js")
   //- script(src="mailform/js/mailform-js.php")
   script(src="js/wow.min.js")
+  script(src="js/modaal.min.js")
   script(src="js/script.js")
   // body END
 

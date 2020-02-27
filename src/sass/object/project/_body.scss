@@ -52,3 +52,11 @@ p {
   font-size: 1.6rem;
   margin-top: 32px;
 }
+
+// *:focus {
+//   outline: none;
+// }
+
+*:focus-visible {
+  outline: 2px dotted $main-cr;
+}

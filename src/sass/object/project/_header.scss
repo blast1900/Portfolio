@@ -18,11 +18,11 @@
   display: block;
   width: 120px;
   height: 40px;
-  background: url(../img/logo.png) no-repeat center/contain;
+  background: url(../img/header-logo.png) no-repeat center/contain;
   transition: 0.2s;
 
   &:hover {
-    background-image: url(../img/logo-hover.png);
+    background-image: url(../img/header-logo-hover.png);
   }
 }
 

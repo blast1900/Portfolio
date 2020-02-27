@@ -9,14 +9,17 @@
 
 .p-tools__box {
   @include mq("tab-pc") {
-    margin: 0 48px 48px 0;
+    margin: 0px 48px 48px 0;
     width: calc(33.3333333% - 96px / 3);
 
     &:nth-child(3n) {
       margin-right: 0;
     } 
-  }
+    &:nth-child(n+10) {
+      margin-bottom: 0;
+    } 
 
+  }
   @include mq("sp") {
     margin: 0 24px 36px 0;
     width: calc(50% - 24px / 2);
@@ -24,14 +27,53 @@
     &:nth-child(2n) {
       margin-right: 0;
     } 
+    &:nth-child(n+11) {
+      margin-bottom: 0;
+    } 
   }
 }
-
-
 
 .p-tools__img {
   margin: 0 auto;
   width: 100px;
+  height: 100px;
+  background: no-repeat center/contain;
+  &.p-tools--pug {
+    background-image: url(../img/tools-pug.png);
+  }
+  &.p-tools--sass {
+    background-image: url(../img/tools-sass.png);
+  }
+  &.p-tools--gulp {
+    background-image: url(../img/tools-gulp.png);
+  }
+  &.p-tools--photoshop {
+    background-image: url(../img/tools-photoshop.png);
+  }
+  &.p-tools--illustrator {
+    background-image: url(../img/tools-illustrator.png);
+  }
+  &.p-tools--xd {
+    background-image: url(../img/tools-xd.png);
+  }
+  &.p-tools--git {
+    background-image: url(../img/tools-git.png);
+  }
+  &.p-tools--unix {
+    background-image: url(../img/tools-unix.png);
+  }
+  &.p-tools--vscode {
+    background-image: url(../img/tools-vscode.png);
+  }
+  &.p-tools--office {
+    background-image: url(../img/tools-office.png);
+  }
+  &.p-tools--developer {
+    background-image: url(../img/tools-developer.png);
+  }
+  &.p-tools--check {
+    background-image: url(../img/tools-check.png);
+  }
 }
 
 .p-tools__title {
@@ -43,4 +85,64 @@
 .p-tools__description {
   font-size: 1.6rem;
   margin-top: .5em;
+}
+
+.p-checklist__button {
+  display: inline-block;
+  margin-top: 24px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1.4rem;
+  font-weight: bold;
+  box-shadow: 0px 5px darken($color: $accent-cr, $amount: 20) ;
+  padding: 8px;
+  background-color: $accent-cr;
+  color: $main-cr;
+  cursor: pointer;
+  opacity: 1;
+  transition: 0.2s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.modaal-content-container {
+  padding: 0;
+}
+.modaal-container {
+  width: auto;
+}
+
+.p-checklist__modal {
+  border: 5px double $main-cr;
+  padding: 12px;
+}
+
+.p-checklist__title {
+  font-size: 3.2rem;
+  font-weight: bold;
+  color: $main-cr;
+  padding-bottom: 12px;
+  margin-bottom: 24px;
+  text-align: center;
+  border-bottom: 3px solid $main-cr;
+}
+
+.p-checklist__list {
+  list-style: none;
+}
+
+.p-checklist__item {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  position: relative;
+
+  &::before {
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    content: "\f14a";
+    color: $main-cr;
+    margin-right: 10px;
+  }
 }

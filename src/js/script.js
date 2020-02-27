@@ -39,4 +39,10 @@ jQuery(function() {
 
   // WOW
   new WOW().init();
+
+  // modaal
+  jQuery("#js-checklist__button").modaal({
+      content_source: '#js-checklist__modal',
+      background_scroll: false
+  });
 });
