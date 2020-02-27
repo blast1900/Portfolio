@@ -80,6 +80,10 @@
   text-align: center;
   font-size: 2.4rem;
   color: $main-cr;
+
+  @include mq() {
+    font-size: 1.9rem;
+  }
 }
 
 .p-tools__description {
@@ -93,17 +97,23 @@
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
-  box-shadow: 0px 5px darken($color: $accent-cr, $amount: 20) ;
   padding: 8px;
-  background-color: $accent-cr;
-  color: $main-cr;
   cursor: pointer;
-  opacity: 1;
+  background-color: $white;
+  color: $main-cr;
+  border: 2px solid $main-cr;
+  border-radius: 3px;
+  box-shadow: 0px 3px $main-cr;
   transition: 0.2s;
+
   &:hover {
-    opacity: 0.8;
+    background-color: $accent-cr;
+  }
+
+  @include mq() {
+    font-size: 1.4rem;
   }
 }
 

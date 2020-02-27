@@ -184,10 +184,14 @@ p {
   display: block;
   font-size: 1.6rem; }
 .p-section__description {
-  width: 100%;
+  margin: 0 auto;
+  max-width: 640px;
   text-align: center;
   font-size: 1.6rem;
   margin-top: 32px; }
+@media screen and (max-width: 767px) {
+    .p-section__description {
+      text-align: left; } }
 *:focus-visible {
   outline: 2px dotted #123E97; }
 #p-header {
@@ -432,6 +436,9 @@ p {
   text-align: center;
   font-size: 2.4rem;
   color: #123E97; }
+@media screen and (max-width: 767px) {
+    .p-tools__title {
+      font-size: 1.9rem; } }
 .p-tools__description {
   font-size: 1.6rem;
   margin-top: .5em; }
@@ -441,17 +448,21 @@ p {
   position: relative;
   left: 50%;
   transform: translate(-50%, 0);
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: bold;
-  box-shadow: 0px 5px #d69719;
   padding: 8px;
-  background-color: #EDC168;
-  color: #123E97;
   cursor: pointer;
-  opacity: 1;
+  background-color: #fff;
+  color: #123E97;
+  border: 2px solid #123E97;
+  border-radius: 3px;
+  box-shadow: 0px 3px #123E97;
   transition: 0.2s; }
 .p-checklist__button:hover {
-    opacity: 0.8; }
+    background-color: #EDC168; }
+@media screen and (max-width: 767px) {
+    .p-checklist__button {
+      font-size: 1.4rem; } }
 .modaal-content-container {
   padding: 0; }
 .modaal-container {
@@ -519,6 +530,81 @@ p {
   margin-top: .5em; }
 #p-contact {
   background-color: #fff; }
+.p-contact__box {
+  margin: 0 auto;
+  width: 270px;
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative; }
+.p-contact__box::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+    width: 400px;
+    height: 5px;
+    background-color: #123E97; }
+.p-contact__box::after {
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 80vw;
+    width: 400px;
+    height: 5px;
+    background-color: #123E97; }
+@media screen and (max-width: 767px) {
+    .p-contact__box {
+      font-size: 1.8rem; } }
+.p-contact__box a {
+    text-decoration: none;
+    color: #123E97;
+    transition: 0.2s;
+    margin-left: 6px; }
+.p-contact__box a:hover {
+      color: #EDC168; }
+.p-contact__tel a::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f095";
+  padding-right: 12px;
+  position: relative; }
+.p-contact__mail a::before {
+  font-family: "Font Awesome 5 Pro";
+  font-weight: 900;
+  content: "\f0e0";
+  padding-right: 12px;
+  position: relative; }
+form#mail_form {
+  margin-top: 80px;
+  font-size: 16px; }
+form#mail_form dl dt span {
+    color: #333; }
+form#mail_form .required::after {
+    content: "必須";
+    margin-left: 12px;
+    color: #EDC168;
+    font-weight: bold;
+    border: 1px solid #EDC168;
+    border-radius: 3px;
+    padding: 6px; }
+form#mail_form input#form_submit_button {
+    margin: 0;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    color: #123E97;
+    border: 1px solid #123E97;
+    box-shadow: 0px 2px #123E97;
+    transition: 0.2s; }
+form#mail_form input#form_submit_button:hover {
+      background-color: #EDC168; }
+form#mail_form input#mail_address, form#mail_form input#mail_address_confirm {
+  width: auto; }
 .p-footer__copy {
   color: #fff;
   text-align: center;
