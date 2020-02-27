@@ -82,7 +82,7 @@ form#mail_form {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    background-color: $white;
+    background-color: rgba($accent-cr, 0.7);
     color: $main-cr;
     border: 1px solid $main-cr;
     box-shadow: 0px 2px $main-cr;
