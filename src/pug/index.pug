@@ -8,11 +8,10 @@ html(lang='ja')
     script(src="https://kit.fontawesome.com/e199f679fa.js" crossorigin="anonymous")
     link(rel='stylesheet' href!='https://fonts.googleapis.com/css?family=Raleway&display=swap')
     link(rel="stylesheet" href="mailform/css/mailform.css")
-    link(rel="stylesheet" href="mailform/css/jquery.datetimepicker.css")
     link(rel='stylesheet' href='css/animate.css')
     link(rel='stylesheet' href='css/modaal.min.css')
     link(rel='stylesheet' href='css/style.css')
-    title タイトル
+    title Portfolio site
     meta(name='description' content='')
     meta(name='keywords' content='')
 
@@ -28,6 +27,7 @@ html(lang='ja')
   - var menuSubTitle05 = "お問い合わせ"
 
   body
+    div#c-loader-bg
     header#p-header
       div.l-inner
         h1
@@ -107,7 +107,8 @@ html(lang='ja')
           div.p-section__header
             h2.p-section__title Profile
               span.p-section__subtitle 自己紹介
-            p.p-section__description ポートフォリオをご覧頂きありがとうございます。<br>WEBエンジニアとして就職活動中の 米倉 康弘（よねくら やすひろ）と申します。
+            p.p-section__description
+              span.p-section__description--inner ポートフォリオをご覧頂きありがとうございます。WEBエンジニアとして就職活動中の <span class="u-inline-block">米倉 康弘</span><span class="u-inline-block">（よねくら やすひろ）</span>と申します。
           div.p-section__content
             div.p-profile__box
               div.p-profile__img.wow.fadeInLeft
@@ -207,75 +208,76 @@ html(lang='ja')
           div.p-section__header
             h2.p-section__title Tools
               span.p-section__subtitle 使用可能ツール
-            p.p-section__description 使用可能なツールを紹介します。
+            p.p-section__description
+              span.p-section__description--inner 使用可能なツールを紹介します。
           div.p-section__content
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--pug
               div.p-tools__content
                 h3.p-tools__title Pug
                 p.p-tools__description 基本的な記述方法に加え、変数、includeなどを用いて効率的にコーディングを行えます。
 
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--sass
               div.p-tools__content
                 h3.p-tools__title Sass
                 p.p-tools__description Pugと同様に、変数、includeなどを用いて効率的にコーディングを行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--gulp
               div.p-tools__content
                 h3.p-tools__title Gulp
                 p.p-tools__description Gulpを用いて自動コンパイルやブラウザ同期などを必要に応じて実装できます。導入に必要なNode.jsやnpmなどの使い方も理解しています。
 
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--photoshop
               div.p-tools__content
                 h3.p-tools__title Photoshop
                 p.p-tools__description 画像のスライス、用途に合わせた書き出し、簡単なレタッチなどを行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--illustrator
               div.p-tools__content
                 h3.p-tools__title Illustrator
                 p.p-tools__description 画像のスライス、用途に合わせた書き出し、簡単なイラストの作成などを行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--xd
               div.p-tools__content
                 h3.p-tools__title XD
                 p.p-tools__description 画像やテキスト情報などの抽出、プロトタイプの作成などを行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--git
               div.p-tools__content
                 h3.p-tools__title Git
                 p.p-tools__description Git/Githubの基本的な使用方法に加え、複数人での開発を想定したブランチの運用も理解しています。
 
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--unix
               div.p-tools__content
                 h3.p-tools__title UNIXコマンド
                 p.p-tools__description ファイルやディレクトリの操作をUNIXコマンドを用いて行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--vscode
               div.p-tools__content
                 h3.p-tools__title VScode
                 p.p-tools__description エディターはVScodeを使用しており、プラグインなどを用いて効率的にコーディングを行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--office
               div.p-tools__content
                 h3.p-tools__title Officeソフト
                 p.p-tools__description ExcelなどのOfficeソフトは実務で使用していたため、主要な操作はひと通り行えます。
             
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--developer
               div.p-tools__content
                 h3.p-tools__title Developerツール
                 p.p-tools__description Elements・Consoleパネルを使用した表示の検証や、Networkパネルを使用した速度の検証を行えます。
 
-            div.p-tools__box
+            div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--check
               div.p-tools__content
                 h3.p-tools__title チェックリスト
@@ -313,20 +315,27 @@ html(lang='ja')
           div.p-section__header
             h2.p-section__title Works
               span.p-section__subtitle 作品
-            p.p-section__description 作成したサイトを紹介します。
+            p.p-section__description
+              span.p-section__description--inner 作成したサイトを紹介します。
           div.p-section__content
-            div.p-works__box.p-works__box--html
+            div.p-works__box.wow.flipInY
+              div.p-works__content
+                h3.p-works__title テーマタイトル
+                div.p-works__description テーマ説明
               div.p-works__img
                 img(src="", alt="")
+            div.p-works__box.wow.flipInY
               div.p-works__content
-                h3.p-works__title HTML
-                div.p-works__description
-            div.p-works__box.p-works__box--html
-              div.p-works__content
-                h3.p-works__title ブログ型オリジナルテーマ
-                div.p-works__description 投稿機能付きのオリジナルテーマです。
+                h3.p-works__title テーマタイトル
+                div.p-works__description テーマ説明
               div.p-works__img
-                img(src="img/sample-page01.png", alt="")
+                img(src="", alt="")
+            div.p-works__box.wow.flipInY
+              div.p-works__content
+                h3.p-works__title テーマタイトル
+                div.p-works__description テーマ説明
+              div.p-works__img
+                img(src="", alt="")
       // section works END
 
       section#p-contact.p-section
@@ -334,7 +343,8 @@ html(lang='ja')
           div.p-section__header
             h2.p-section__title Contact
               span.p-section__subtitle お問い合わせ
-            p.p-section__description ここまでポートフォリオをご覧いただきありがとうございます。<br>興味をもっていただけましたら、下記の電話番号・メールアドレスにご連絡いただくか、下部のお問い合わせフォームよりご連絡ください。
+            p.p-section__description
+              span.p-section__description--inner ここまでポートフォリオをご覧いただきありがとうございます。<br>興味をもっていただけましたら、下記の電話番号・メールアドレスにご連絡いただくか、下部のお問い合わせフォームよりご連絡ください。
           div.p-section__content
             div.p-contact__box
               p.p-contact__tel
@@ -344,8 +354,8 @@ html(lang='ja')
                 a(href="mailto:novasavasava@gmail.com")
                 span novasavasava@gmail.com
 
-            div.p-contact__form.
-              <form action="php/mailform.php" method="post" id="mail_form">
+            div.p-contact__form.wow.fadeInUp.
+              <form action="mailform/php/mailform.php" method="post" id="mail_form">
                 <dl>
                   <dt>御社名<span>Company Name</span></dt>
                   <dd class="required"><input type="text" id="company" name="company" value="" /></dd>
@@ -381,13 +391,12 @@ html(lang='ja')
         p.p-footer__copy &copy; 2020 Yasuhiro Yonekura
     // footer END
 
-  script(src="https://code.jquery.com/jquery-3.3.1.min.js")
-  script(src="js/jquery.ripples-min.js")
-  //- script(src="mailform/js/mailform-js.php")
-  script(src="mailform/js/jquery.datetimepicker.js")
-  script(src="js/wow.min.js")
-  script(src="js/modaal.min.js")
-  script(src="js/script.js")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(src="js/jquery.ripples-min.js")
+    script(src="mailform/js/mailform-js.php")
+    script(src="js/wow.min.js")
+    script(src="js/modaal.min.js")
+    script(src="js/script.js")
   // body END
 
 

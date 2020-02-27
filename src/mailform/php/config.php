@@ -5,7 +5,7 @@
 
 
 //【必須】 自分のメールアドレスの設定 -- 複数のメールアドレスに送信したい場合は、以下の行をコピーして増やしていけばOKです。行頭の//を消せば有効となります。いくつでも追加可能。 --
-$rm_send_address[] = 'aaa@example.co.jp';
+$rm_send_address[] = 'novasavasava@gmail.com';
 //$rm_send_address[] = 'aaa@example.co.jp';
 //$rm_send_address[] = 'bbb@example.co.jp';
 
@@ -56,7 +56,7 @@ $rm_reply_mail = 1;
 
 
 //【だいたい必須】 メールの差出人名に表示される自分の名前 -- 相手への自動返信メールに使用されます --
-$rm_send_name = 'レスポンシブメールフォーム　差出人';
+$rm_send_name = '米倉 康弘';
 
 
 
@@ -71,7 +71,7 @@ $rm_thanks_subject = 'お問い合わせありがとうございました。';
 $rm_thanks_body  = <<<EOM
 
 この度はお問い合わせをいただき、ありがとうございました。
-折り返し担当者から返信が行きますので、しばらくお待ちください。
+折り返しご連絡いたしますので、しばらくお待ちください。
 以下の内容でお問い合わせをお受けいたしました。
 
 EOM;
@@ -85,11 +85,10 @@ $rm_thanks_body_signature = <<<EOM
 この度はお問い合わせを頂き、重ねてお礼申し上げます。
 -----------------------------------------------------------------------------------
 
-　　レスポンシブメールフォーム
-　　〒***-**** ここに住所など
-　　TEL : ***-***-****
-　　Web Site URL : https://www.1-firststep.com
-　　Blog URL : https://www.firstsync.net
+　　米倉 康弘（よねくら やすひろ）
+　　TEL : 090-7696-0419
+　　mail : novasavasava@gmail.com
+　　Web Site URL : https://portfolio.novasava.com
 
 -----------------------------------------------------------------------------------
 

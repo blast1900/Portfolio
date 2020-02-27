@@ -47,7 +47,10 @@ p {
 }
 
 .p-section__description {
-  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 640px;
   text-align: center;
   font-size: 1.6rem;

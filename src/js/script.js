@@ -1,7 +1,7 @@
 jQuery(function() {
   // header色変化
   jQuery(window).scroll(function() {
-    if (jQuery(this).scrollTop() > 0) {
+    if (jQuery(this).scrollTop() > 10) {
       jQuery('#p-header').css({ 'background-color': "inherit", "opacity": 0.9 });
     } else {
       jQuery('#p-header').css({ 'background-color': "transparent", "opacity": 1 });
@@ -44,5 +44,10 @@ jQuery(function() {
   jQuery("#js-checklist__button").modaal({
       content_source: '#js-checklist__modal',
       background_scroll: false
+  });
+
+  // loader
+  jQuery(window).on('load', function() {
+    jQuery('#c-loader-bg').fadeOut(1000);
   });
 });

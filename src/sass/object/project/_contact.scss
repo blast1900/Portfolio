@@ -68,23 +68,13 @@
   }
 }
 
-
+// mailform打ち消し
 form#mail_form {
   margin-top: 80px;
   font-size: 16px;
 
   dl dt span {
     color: $black;
-  }
-
-  .required::after {
-    content: "必須";
-    margin-left: 12px;
-    color: $accent-cr;
-    font-weight: bold;
-    border: 1px solid $accent-cr;
-    border-radius: 3px;
-    padding: 6px;
   }
 
   input#form_submit_button {
@@ -104,6 +94,25 @@ form#mail_form {
   }
 }
 
+form#mail_form input[type="text"]:focus, form#mail_form input[type="email"]:focus, form#mail_form input[type="tel"]:focus, form#mail_form textarea:focus {
+    box-shadow: 0 0 5px $main-cr;
+    border: 1px solid $main-cr;
+}
+
 form#mail_form input#mail_address, form#mail_form input#mail_address_confirm {
   width: auto;
+}
+
+form#mail_form dl dt span.required {
+  background-color: transparent;
+  border: 1px solid $main-cr;
+  color: $main-cr;
+  font-weight: bold;
+}
+
+form#mail_form dl dt span.optional {
+  background-color: transparent;
+  border: 1px solid $accent-cr;
+  color: $accent-cr;
+  font-weight: bold;
 }

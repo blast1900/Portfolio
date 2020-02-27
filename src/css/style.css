@@ -1,4 +1,20 @@
 @charset "UTF-8";
+#c-loader-bg {
+  display: block;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999; }
+#c-loader-bg img {
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; }
 .l-inner {
   margin: 0 auto;
   padding-right: 60px;
@@ -13,6 +29,8 @@
     .l-inner {
       padding-right: 24px;
       padding-left: 24px; } }
+.u-inline-block {
+  display: inline-block; }
 .c-drawer {
   position: fixed;
   top: 0;
@@ -184,7 +202,10 @@ p {
   display: block;
   font-size: 1.6rem; }
 .p-section__description {
-  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   max-width: 640px;
   text-align: center;
   font-size: 1.6rem;
@@ -198,7 +219,8 @@ p {
   transition: 0.5s;
   position: fixed;
   width: 100%;
-  z-index: 20; }
+  z-index: 20;
+  background-color: transparent; }
 #p-header .l-inner {
     height: 60px;
     padding: 0 24px;
@@ -505,19 +527,21 @@ p {
   color: #fff; }
 @media screen and (min-width: 768px) {
   .p-works__box {
-    margin-right: 48px;
-    width: calc(50% - 96px / 2); } }
+    margin-right: 24px;
+    width: calc(33.33333% - 48px / 3); }
+    .p-works__box:nth-child(3n) {
+      margin-right: 0; } }
 @media screen and (max-width: 767px) {
   .p-works__box {
-    width: 100%; }
-    .p-works__box:nth-child(2n) {
-      margin-top: 32px; } }
+    width: 100%;
+    margin-bottom: 24px; }
+    .p-works__box:last-child {
+      margin-bottom: 0; } }
 .p-works__box {
   background-color: #fff;
   padding: 24px;
   border: 10px double #123E97;
-  height: 600px;
-  overflow: scroll; }
+  height: 500px; }
 .p-works__img {
   margin-top: 24px; }
 .p-works__title {
@@ -583,14 +607,6 @@ form#mail_form {
   font-size: 16px; }
 form#mail_form dl dt span {
     color: #333; }
-form#mail_form .required::after {
-    content: "必須";
-    margin-left: 12px;
-    color: #EDC168;
-    font-weight: bold;
-    border: 1px solid #EDC168;
-    border-radius: 3px;
-    padding: 6px; }
 form#mail_form input#form_submit_button {
     margin: 0;
     position: relative;
@@ -603,8 +619,21 @@ form#mail_form input#form_submit_button {
     transition: 0.2s; }
 form#mail_form input#form_submit_button:hover {
       background-color: #EDC168; }
+form#mail_form input[type="text"]:focus, form#mail_form input[type="email"]:focus, form#mail_form input[type="tel"]:focus, form#mail_form textarea:focus {
+  box-shadow: 0 0 5px #123E97;
+  border: 1px solid #123E97; }
 form#mail_form input#mail_address, form#mail_form input#mail_address_confirm {
   width: auto; }
+form#mail_form dl dt span.required {
+  background-color: transparent;
+  border: 1px solid #123E97;
+  color: #123E97;
+  font-weight: bold; }
+form#mail_form dl dt span.optional {
+  background-color: transparent;
+  border: 1px solid #EDC168;
+  color: #EDC168;
+  font-weight: bold; }
 .p-footer__copy {
   color: #fff;
   text-align: center;

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/ress.css">
+    <link rel="stylesheet" href="css/thanks.css">
+    <title>お問い合わせ完了画面</title>
+  </head>
+  <body>
+    <div id="c-loader-bg"></div>
+    <div id="thanks">
+      <div class="l-inner">
+        <div class="p-thanks__box">
+          <h1 class="p-thanks__title">お問い合わせが完了しました。</h1>
+          <p class="p-thanks__text">お問い合わせいただきありがとうございました。</p>
+          <p class="p-thanks__text">折り返しご連絡いたしますので、恐れ入りますが、しばらくお待ちください。</p>
+          <p class="p-thanks__text">なお、ご入力いただいたメールアドレス宛に受付完了メールを配信しております。<br>完了メールが届かない場合、処理が正常に行われていない可能性があります。<br>大変お手数ですが、再度お問い合わせの手続きをお願い致します。</p><a class="p-thanks__button" href="index.html">ポートフォリオサイトに戻る</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      jQuery(window).on('load', function() {
+        jQuery('#c-loader-bg').fadeOut(1000);
+      });
+    </script>
+  </body>
+  <!-- body END-->
+</html>

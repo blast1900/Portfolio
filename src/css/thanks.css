@@ -1,0 +1,121 @@
+@charset "UTF-8";
+#c-loader-bg {
+  display: block;
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999; }
+#c-loader-bg img {
+  background: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10; }
+.l-inner {
+  margin: 0 auto;
+  padding-right: 60px;
+  padding-left: 60px;
+  max-width: 100%;
+  width: 1199px; }
+@media screen and (max-width: 1198px) {
+    .l-inner {
+      padding-right: 36px;
+      padding-left: 36px; } }
+@media screen and (max-width: 767px) {
+    .l-inner {
+      padding-right: 24px;
+      padding-left: 24px; } }
+html {
+  font-size: 62.5%; }
+body {
+  font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "MS Pゴシック", "MS PGothic", sans-serif;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #123E97;
+  overflow-x: hidden; }
+img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  vertical-align: bottom; }
+p {
+  margin-bottom: 0; }
+.p-section {
+  padding-bottom: 64px; }
+.p-section__header {
+  padding-top: 64px;
+  margin-bottom: 64px; }
+.p-section__title {
+  font-size: 4.0rem;
+  color: #123E97;
+  text-align: center; }
+.p-section__subtitle {
+  display: block;
+  font-size: 1.6rem; }
+.p-section__description {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 640px;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 32px; }
+@media screen and (max-width: 767px) {
+    .p-section__description {
+      text-align: left; } }
+*:focus-visible {
+  outline: 2px dotted #123E97; }
+body {
+  background: url(../img/mv-bg.jpg) no-repeat; }
+.p-thanks__box {
+  width: 80vw;
+  background: #fff;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  box-shadow: 0 0 10px;
+  padding: 32px;
+  margin: 5vw 0; }
+@media screen and (max-width: 767px) {
+    .p-thanks__box {
+      width: 90vw;
+      transform: translate(-50%, 0); } }
+.p-thanks__title {
+  font-size: 2.4rem;
+  color: #123E97;
+  margin-bottom: 24px; }
+.p-thanks__text {
+  font-size: 1.6rem;
+  margin-bottom: 24px; }
+.p-thanks__button {
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  color: #123E97;
+  border: 2px solid #123E97;
+  border-radius: 3px;
+  box-shadow: 0px 3px #123E97;
+  transition: 0.2s;
+  text-decoration: none; }
+.p-thanks__button:hover {
+    background-color: #EDC168; }
+@media screen and (max-width: 767px) {
+    .p-thanks__button {
+      font-size: 1.4rem; } }
+/*# sourceMappingURL=thanks.css.map */
