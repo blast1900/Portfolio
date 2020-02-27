@@ -8,6 +8,9 @@
   top: 0px;
   left: 0px;
   z-index: 9999; }
+@media screen and (max-width: 767px) {
+    #c-loader-bg {
+      display: none; } }
 #c-loader-bg img {
   background: #fff;
   position: fixed;

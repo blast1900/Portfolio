@@ -8,6 +8,9 @@
   top: 0px;
   left: 0px;
   z-index: 9999; }
+@media screen and (max-width: 767px) {
+    #c-loader-bg {
+      display: none; } }
 #c-loader-bg img {
   background: #fff;
   position: fixed;
@@ -77,7 +80,7 @@ p {
 body {
   background: url(../img/mv-bg.jpg) no-repeat; }
 .p-thanks__box {
-  width: 80vw;
+  max-width: 700px;
   background: #fff;
   position: relative;
   left: 50%;

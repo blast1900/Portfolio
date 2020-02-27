@@ -8,13 +8,6 @@ jQuery(function() {
     }
   });
 
-  // ripples
-  jQuery('#p-mv').ripples({ //波紋をつけたい要素の指定
-    resolution: 800, //波紋の広がりの速度（値が大きいほど遅くなる）
-    dropRadius: 10, //波紋の大きさ（値が大きいほどでかくなる）
-    perturbance: 0.01 //波紋による屈折量（値が大きいほどブレる）
-  });
-
   // スムーススクロール
 	jQuery('a[href^="#"]').click(function() {
 		let header = jQuery("#p-header").height();
@@ -46,8 +39,24 @@ jQuery(function() {
       background_scroll: false
   });
 
-  // loader
-  jQuery(window).on('load', function() {
-    jQuery('#c-loader-bg').fadeOut(1000);
-  });
+  var regexp = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+  if(window.navigator.userAgent.search(regexp) === -1){
+    // ripples
+    jQuery('#p-mv').ripples({ //波紋をつけたい要素の指定
+      resolution: 800, //波紋の広がりの速度（値が大きいほど遅くなる）
+      dropRadius: 10, //波紋の大きさ（値が大きいほどでかくなる）
+      perturbance: 0.01 //波紋による屈折量（値が大きいほどブレる）
+    });
+
+  }
+    // loader
+    jQuery(window).on('resize', function() {
+      jQuery('#c-loader-bg').fadeOut(1000);
+    });
+    jQuery(window).on('load', function() {
+      jQuery('#c-loader-bg').fadeOut(1000)
+    });
+
+
+
 });

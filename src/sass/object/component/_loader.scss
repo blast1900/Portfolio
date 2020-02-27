@@ -7,6 +7,10 @@
   top: 0px;
   left: 0px;
   z-index: 9999;
+
+  @include mq() {
+    display: none;
+  }
 }
 
 #c-loader-bg img {	
