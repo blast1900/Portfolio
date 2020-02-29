@@ -7,10 +7,12 @@ html(lang='ja')
     link(rel='stylesheet' href='css/ress.css')
     script(src="https://kit.fontawesome.com/e199f679fa.js" crossorigin="anonymous")
     link(rel='stylesheet' href!='https://fonts.googleapis.com/css?family=Raleway&display=swap')
-    link(rel="stylesheet" href="mailform/css/mailform.css")
+    link(rel='stylesheet' href='mailform/css/mailform.css')
     link(rel='stylesheet' href='css/animate.css')
     link(rel='stylesheet' href='css/modaal.min.css')
     link(rel='stylesheet' href='css/style.css')
+    link(rel='icon' href='/img/favicon.ico')
+
     title Portfolio site
     meta(name='description' content='')
     meta(name='keywords' content='')
@@ -209,7 +211,7 @@ html(lang='ja')
             h2.p-section__title Tools
               span.p-section__subtitle 使用可能ツール
             p.p-section__description
-              span.p-section__description--inner 使用可能なツールを紹介します。
+              span.p-section__description--inner 現在使用可能なツールを紹介します。
           div.p-section__content
             div.p-tools__box.wow.fadeIn
               div.p-tools__img.p-tools--pug
@@ -316,26 +318,32 @@ html(lang='ja')
             h2.p-section__title Works
               span.p-section__subtitle 作品
             p.p-section__description
-              span.p-section__description--inner 作成したサイトを紹介します。
+              span.p-section__description--inner 過去に作成したサイトの一部を紹介します。
           div.p-section__content
             div.p-works__box.wow.fadeInUp
               div.p-works__content
-                h3.p-works__title テーマタイトル
-                div.p-works__description テーマ説明
+                h3.p-works__title WordPressテーマ
+                p.p-works__description ブログ型のWordPressテーマです。関連記事・人気記事の表示やウィジェットなど、ブログ型に必要な機能を習得するため作成しました。
+                a.p-works__button(href="http://portfolio.novasava.com/wp-sample/" target="_blank") サイトを見る 
+                  <i class="fas fa-external-link-alt"></i>
               div.p-works__img
-                img(src="", alt="")
+                img(src="img/works-01.jpg", alt="")
             div.p-works__box.wow.fadeInUp
               div.p-works__content
-                h3.p-works__title テーマタイトル
-                div.p-works__description テーマ説明
+                h3.p-works__title Bootstrapデモサイト
+                p.p-works__description Bootstrap4を用いて作成したサイトです。グリッドシステムなど、Bootstrapの特徴的な機能を抜粋して作成しました。
+                a.p-works__button(href="https://novasava.com/portfolio/bootstrap-demo/" target="_blank") サイトを見る 
+                  <i class="fas fa-external-link-alt"></i>
               div.p-works__img
-                img(src="", alt="")
+                img(src="img/works-02.jpg", alt="")
             div.p-works__box.wow.fadeInUp
               div.p-works__content
-                h3.p-works__title テーマタイトル
-                div.p-works__description テーマ説明
+                h3.p-works__title 事業用スマホサイト
+                p.p-works__description 知人からの依頼で作成した事業用サイトです。「デザインはスマホを対象に」「wordpressで編集できるように」との要望のもとシンプルなサイトに仕上げました。
+                a.p-works__button(href="https://blog.endstart.net/endstart-design-z" target="_blank") サイトを見る 
+                  <i class="fas fa-external-link-alt"></i>
               div.p-works__img
-                img(src="", alt="")
+                img(src="img/works-03.jpg", alt="")
       // section works END
 
       section#p-contact.p-section
