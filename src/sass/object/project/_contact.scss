@@ -68,9 +68,10 @@
   }
 }
 
-// mailform打ち消し
+// mailform関連スタイル打ち消し
 form#mail_form {
   margin-top: 80px;
+  margin-bottom: 0;
   font-size: 16px;
 
   dl dt span {

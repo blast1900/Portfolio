@@ -49,6 +49,9 @@
   border: 10px double $main-cr;
   height: 500px;
   overflow: auto;
+  @include mq() {
+    height:auto;
+  }
 }
 
 .p-works__img {

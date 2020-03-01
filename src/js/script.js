@@ -51,11 +51,11 @@ jQuery(function() {
   }
 
   // loader
-  jQuery(window).on('resize', function() {
-    jQuery('#c-loader-bg').fadeOut(1000);
-  });
-  jQuery(window).on('load', function() {
-    jQuery('#c-loader-bg').fadeOut(1000);
-  });
+  // jQuery(window).on('resize', function() {
+  //   jQuery('#c-loader-bg').fadeOut(1000);
+  // });
+  // jQuery(window).on('load', function() {
+  //   jQuery('#c-loader-bg').fadeOut(1000);
+  // });
 
 });
