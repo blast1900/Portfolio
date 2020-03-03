@@ -24,6 +24,9 @@
   border: 10px double $main-cr;
   display: flex;
   position: relative;
+  @include mq() {
+    padding: 0;
+  }
 }
 
 .p-coding__img {
@@ -54,6 +57,9 @@
   align-self: center; 
   flex: 1;
   margin: 0 32px;
+  @include mq() {
+    margin: 0;
+  }
 }
 
 .p-coding__box {
@@ -66,6 +72,12 @@
   @include mq() {
     text-align: center;
   }
+}
+
+.p-coding__description {
+  padding-left: 24px;
+  padding-right: 12px;
+  padding-bottom: 12px;
 }
 
 .p-coding__description li {

@@ -388,6 +388,9 @@ p {
   border: 10px double #123E97;
   display: flex;
   position: relative; }
+@media screen and (max-width: 767px) {
+    .p-coding__box {
+      padding: 0; } }
 .p-coding__img {
   width: 150px;
   margin-right: 24px;
@@ -408,6 +411,9 @@ p {
   align-self: center;
   flex: 1;
   margin: 0 32px; }
+@media screen and (max-width: 767px) {
+    .p-coding__content {
+      margin: 0; } }
 .p-coding__box {
   background-color: #fff; }
 .p-coding__title {
@@ -416,6 +422,10 @@ p {
 @media screen and (max-width: 767px) {
     .p-coding__title {
       text-align: center; } }
+.p-coding__description {
+  padding-left: 24px;
+  padding-right: 12px;
+  padding-bottom: 12px; }
 .p-coding__description li {
   font-size: 1.6rem;
   margin-top: .5em; }
@@ -557,11 +567,12 @@ p {
   background-color: #fff;
   padding: 24px;
   border: 10px double #123E97;
-  height: 500px;
+  height: 700px;
   overflow: auto; }
 @media screen and (max-width: 767px) {
     .p-works__box {
-      height: auto; } }
+      height: auto;
+      padding: 12px; } }
 .p-works__img {
   margin-top: 24px;
   box-shadow: 0 0 5px #333; }
@@ -569,6 +580,9 @@ p {
   text-align: center;
   font-size: 2.4rem;
   color: #123E97; }
+@media screen and (max-width: 767px) {
+    .p-works__title {
+      font-size: 2rem; } }
 .p-works__description {
   text-align: center;
   font-size: 1.6rem;
@@ -583,7 +597,8 @@ p {
   border-radius: 5px;
   color: #123E97;
   border: 1px solid #123E97;
-  transition: 0.2s; }
+  transition: 0.2s;
+  box-shadow: 0 0 3px #888; }
 .p-works__button:hover {
     background-color: #EDC168; }
 #p-contact {
@@ -654,6 +669,12 @@ form#mail_form input#form_submit_button {
     transition: 0.2s; }
 form#mail_form input#form_submit_button:hover {
       background-color: #EDC168; }
+form#mail_form .p-contact__form__title {
+    text-align: center;
+    color: #333;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 12px 0; }
 form#mail_form input[type="text"]:focus, form#mail_form input[type="email"]:focus, form#mail_form input[type="tel"]:focus, form#mail_form textarea:focus {
   box-shadow: 0 0 5px #123E97;
   border: 1px solid #123E97; }

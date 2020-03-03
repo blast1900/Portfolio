@@ -68,6 +68,7 @@
   }
 }
 
+
 // mailform関連スタイル打ち消し
 form#mail_form {
   margin-top: 80px;
@@ -93,6 +94,15 @@ form#mail_form {
       background-color: $accent-cr;
     }
   }
+
+  .p-contact__form__title {
+    text-align: center;
+    color: $black;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 12px 0;
+    // border-bottom: 1px solid $black;
+  } 
 }
 
 form#mail_form input[type="text"]:focus, form#mail_form input[type="email"]:focus, form#mail_form input[type="tel"]:focus, form#mail_form textarea:focus {
